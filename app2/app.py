@@ -46,8 +46,8 @@ def connect_postgresql():
 
 def connect_mongodb():
     global mongo_client
-    connection_string = "mongodb+srv://bstyfs23:<password>@cluster0.uo0pbrc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     try:
+        connection_string = f"mongodb+srv://{config['mongodb']['user']}:{config['mongodb']['password']}@{config['mongodb']['host']}/{config['mongodb']['database']}?retryWrites=true&w=majority"
         mongo_client = pymongo.MongoClient(connection_string)
         # Ping the server to check if the connection is successful
         mongo_client.admin.command('ping')
