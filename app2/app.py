@@ -8,6 +8,8 @@ import pandas as pd
 import io
 import traceback
 import logging
+import pymongo
+from pymongo.errors import ConnectionFailure
 
 app = Flask(__name__)
 
@@ -41,15 +43,21 @@ def connect_postgresql():
         logger.debug(traceback.format_exc())
         return str(e)
 
+
 def connect_mongodb():
     global mongo_client
+    connection_string = "mongodb+srv://bstyfs23:<password>@cluster0.uo0pbrc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     try:
-        mongo_client = pymongo.MongoClient(config['mongodb']['host'], int(config['mongodb']['port']))
+        mongo_client = pymongo.MongoClient(connection_string)
+        # Ping the server to check if the connection is successful
+        mongo_client.admin.command('ping')
+        logger.info("Successfully connected to MongoDB")
         return True
-    except Exception as e:
+    except ConnectionFailure as e:
         logger.error(f"MongoDB connection error: {str(e)}")
         logger.debug(traceback.format_exc())
         return str(e)
+    
 
 def connect_neo4j():
     global neo4j_driver
