@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Explorer</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Database Explorer</h1>
+    <button onclick="fetchSchema()">Get Schema</button>
+    <button onclick="fetchTables()">Get Tables</button>
+    <input type="text" id="tableNameInput" placeholder="Enter table name">
+    <button onclick="fetchTableInfo()">Get Table Info</button>
+    <pre id="result"></pre>
+
+    <script>
+        function fetchSchema() {
+            axios.get('/schema')
+                .then(response => {
+                    document.getElementById('result').textContent = JSON.stringify(response.data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+        function fetchTables() {
+            axios.get('/table')
+                .then(response => {
+                    document.getElementById('result').textContent = JSON.stringify(response.data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+        function fetchTableInfo() {
+            const tableName = document.getElementById('tableNameInput').value;
+            axios.get(`/table/${tableName}`)
+                .then(response => {
+                    document.getElementById('result').textContent = JSON.stringify(response.data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</body>
+</html>
