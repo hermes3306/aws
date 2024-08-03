@@ -393,164 +393,6 @@ class MongoDBManager:
         self.db.drop_collection(collection_name)
         print(f"Collection '{collection_name}' dropped.")
 
-def read_config():
-    config = configparser.ConfigParser()
-    config.read('db.ini')
-    return config
-
-def display_menu():
-    print("\n--- Database Manager ---")
-    print("1. List all tables/labels/collections")
-    print("2. Create a new table/node/collection")
-    print("3. Upload CSV")
-    print("4. Download as CSV")
-    print("5. Delete all tables/nodes/collections")
-    print("6. Display structure")
-    print("7. Execute custom query")
-    print("8. Exit")
-    return input("Enter your choice (1-8): ")
-
-def main():
-    config = read_config()
-    databases = config.sections()
-
-    while True:
-        print("\nAvailable databases:")
-        for i, db in enumerate(databases, 1):
-            print(f"{i}. {db}")
-        choice = input("Choose a database (or 'q' to quit): ")
-        
-        if choice.lower() == 'q':
-            break
-
-        try:
-            db_choice = databases[int(choice) - 1]
-        except (ValueError, IndexError):
-            print(Fore.RED + "Invalid choice. Please try again.")
-            continue
-
-        db_config = dict(config[db_choice])
-        
-        if db_choice == 'postgresql':
-            manager = PostgreSQLManager(db_config)
-        elif db_choice == 'neo4j':
-            manager = Neo4jManager(db_config)
-        elif db_choice == 'mongodb':
-            manager = MongoDBManager(db_config)
-        else:
-            print(Fore.RED + f"Unsupported database type: {db_choice}")
-            continue
-
-        while True:
-            choice = display_menu()
-
-            try:
-                if choice == '1':
-                    if db_choice == 'postgresql':
-                        tables = manager.list_tables()
-                        print("\nCurrent tables:")
-                        for table in tables:
-                            print(table)
-                    elif db_choice == 'neo4j':
-                        labels = manager.get_node_labels()
-                        print("\nCurrent node labels:")
-                        for label in labels:
-                            print(label)
-                    elif db_choice == 'mongodb':
-                        collections = manager.list_collections()
-                        print("\nCurrent collections:")
-                        for collection in collections:
-                            print(collection)
-
-                elif choice == '2':
-                    if db_choice == 'postgresql':
-                        table_name = input("Enter the new table name: ")
-                        columns = input("Enter column names (comma-separated): ")
-                        manager.create_table(table_name, columns)
-                    elif db_choice == 'neo4j':
-                        label = input("Enter the node label: ")
-                        properties = {}
-                        while True:
-                            key = input("Enter property name (or press Enter to finish): ")
-                            if not key:
-                                break
-                            value = input(f"Enter value for {key}: ")
-                            properties[key] = value
-                        manager.create_node(label, properties)
-                    elif db_choice == 'mongodb':
-                        collection_name = input("Enter the new collection name: ")
-                        manager.create_collection(collection_name)
-
-                elif choice == '3':
-                    csv_file = input("Enter the CSV file name: ")
-                    if db_choice == 'postgresql':
-                        manager.upload_csv_to_table(csv_file)
-                    elif db_choice == 'neo4j':
-                        manager.upload_csv_to_nodes(csv_file)
-                    elif db_choice == 'mongodb':
-                        print("CSV upload not implemented for MongoDB")
-
-                elif choice == '4':
-                    if db_choice == 'postgresql':
-                        table_name = input("Enter the table name to download: ")
-                        manager.download_table_as_csv(table_name)
-                    elif db_choice == 'neo4j':
-                        label = input("Enter the node label to download: ")
-                        manager.download_nodes_as_csv(label)
-                    elif db_choice == 'mongodb':
-                        print("CSV download not implemented for MongoDB")
-
-                elif choice == '5':
-                    confirm = input("Are you sure you want to delete all data? (yes/no): ")
-                    if confirm.lower() == 'yes':
-                        if db_choice == 'postgresql':
-                            manager.delete_all_tables()
-                        elif db_choice == 'neo4j':
-                            manager.delete_all_nodes()
-                        elif db_choice == 'mongodb':
-                            for collection in manager.list_collections():
-                                manager.drop_collection(collection)
-                    else:
-                        print("Operation cancelled.")
-
-                elif choice == '6':
-                    if db_choice == 'postgresql':
-                        table_name = input("Enter the table name to display its structure: ")
-                        manager.display_table_structure(table_name)
-                    elif db_choice == 'neo4j':
-                        label = input("Enter the node label to display its structure: ")
-                        manager.display_node_structure(label)
-                    elif db_choice == 'mongodb':
-                        collection_name = input("Enter the collection name: ")
-                        documents = manager.find_documents(collection_name, {})
-                        if documents:
-                            print(f"\nStructure of collection '{collection_name}':")
-                            for key in documents[0].keys():
-                                print(key)
-                        else:
-                            print(f"No documents found in collection '{collection_name}'")
-
-                elif choice == '7':
-                    query = input("Enter your query: ")
-                    if db_choice == 'postgresql':
-                        manager.execute_custom_query(query)
-                    elif db_choice == 'neo4j':
-                        manager.execute_custom_query(query)
-                    elif db_choice == 'mongodb':
-                        print("Custom queries not implemented for MongoDB")
-
-                elif choice == '8':
-                    break
-
-                else:
-                    print(Fore.RED + "Invalid choice. Please try again.")
-
-            except Exception as e:
-                print(Fore.RED + f"An error occurred: {str(e)}")
-
-        if db_choice in ['neo4j', 'mongodb']:
-            manager.close()
-
 class MySQLManager:
     def __init__(self, config):
         self.connection_params = {
@@ -604,11 +446,10 @@ class MySQLManager:
             column_definitions.insert(0, 'id INT AUTO_INCREMENT PRIMARY KEY')
         
         column_definitions = ','.join(column_definitions)
-        create_query = f'CREATE TABLE IF NOT EXISTS `{table_name}` ({column_definitions})'
-        
+        create_query = f'CREATE TABLE IF NOT EXISTS `{table_name}` ({column_definitions})' 
+
         self.execute_query(create_query)
         print(f"Table '{table_name}' created in MySQL.")
-        
 
     def delete_all_tables(self):
         tables = self.list_tables()
@@ -619,7 +460,6 @@ class MySQLManager:
     def get_table_columns(self, table_name):
         query = f"DESCRIBE `{table_name}`"
         return [row[0] for row in self.execute_query(query, fetch=True)]
-
 
     def insert_nodes(self, table_name, nodes, all_properties):
         if not nodes:
@@ -656,7 +496,6 @@ class MySQLManager:
         
         print(f"Table '{table_name}' downloaded as CSV.")
 
-
     def upload_csv_to_table(self, csv_file_name):
         table_name = csv_file_name.replace('.csv', '')
         
@@ -691,7 +530,6 @@ class MySQLManager:
                     conn.commit()
 
         print(f'Data from "{csv_file_name}" uploaded to MySQL table "{table_name}".')
-        
         
     def display_table_structure(self, table_name):
         query = f"DESCRIBE `{table_name}`"
@@ -731,7 +569,7 @@ class MySQLManager:
 
 def read_config():
     config = configparser.ConfigParser()
-    config.read('db.ini')
+    config.read('db2.ini')
     return config
 
 def display_menu():
@@ -760,25 +598,26 @@ def main():
             break
 
         try:
-            db_choice = databases[int(choice) - 1]
+            db_label = databases[int(choice) - 1]
         except (ValueError, IndexError):
             print(Fore.RED + "Invalid choice. Please try again.")
             continue
 
-        db_config = dict(config[db_choice])
+        db_config = dict(config[db_label])
+        db_type = db_config.pop('dbtype')
         
-        if db_choice == 'postgresql':
+        if db_type == 'postgresql':
             manager = PostgreSQLManager(db_config)
-        elif db_choice == 'neo4j':
+        elif db_type == 'neo4j':
             manager = Neo4jManager(db_config)
-        elif db_choice == 'mongodb':
+        elif db_type == 'mongodb':
             manager = MongoDBManager(db_config)
-        elif db_choice == 'mysql':
+        elif db_type == 'mysql':
             manager = MySQLManager(db_config)
-        elif db_choice == 'redis':
+        elif db_type == 'redis':
             manager = RedisManager(db_config)
         else:
-            print(Fore.RED + f"Unsupported database type: {db_choice}")
+            print(Fore.RED + f"Unsupported database type: {db_type}")
             continue
 
         while True:
@@ -786,33 +625,33 @@ def main():
 
             try:
                 if choice == '1':
-                    if db_choice in ['postgresql', 'mysql']:
+                    if db_type in ['postgresql', 'mysql']:
                         tables = manager.list_tables()
                         print("\nCurrent tables:")
                         for table in tables:
                             print(table)
-                    elif db_choice == 'neo4j':
+                    elif db_type == 'neo4j':
                         labels = manager.get_node_labels()
                         print("\nCurrent node labels:")
                         for label in labels:
                             print(label)
-                    elif db_choice == 'mongodb':
+                    elif db_type == 'mongodb':
                         collections = manager.list_collections()
                         print("\nCurrent collections:")
                         for collection in collections:
                             print(collection)
-                    elif db_choice == 'redis':
+                    elif db_type == 'redis':
                         keys = manager.list_keys()
                         print("\nCurrent keys:")
                         for key in keys:
                             print(key)
 
                 elif choice == '2':
-                    if db_choice in ['postgresql', 'mysql']:
+                    if db_type in ['postgresql', 'mysql']:
                         table_name = input("Enter the new table name: ")
                         columns = input("Enter column names (comma-separated): ")
                         manager.create_table(table_name, columns)
-                    elif db_choice == 'neo4j':
+                    elif db_type == 'neo4j':
                         label = input("Enter the node label: ")
                         properties = {}
                         while True:
@@ -822,56 +661,56 @@ def main():
                             value = input(f"Enter value for {key}: ")
                             properties[key] = value
                         manager.create_node(label, properties)
-                    elif db_choice == 'mongodb':
+                    elif db_type == 'mongodb':
                         collection_name = input("Enter the new collection name: ")
                         manager.create_collection(collection_name)
-                    elif db_choice == 'redis':
+                    elif db_type == 'redis':
                         key = input("Enter the key: ")
                         value = input("Enter the value: ")
                         manager.set_value(key, value)
 
                 elif choice == '3':
                     csv_file = input("Enter the CSV file name: ")
-                    if db_choice in ['postgresql', 'mysql']:
+                    if db_type in ['postgresql', 'mysql']:
                         manager.upload_csv_to_table(csv_file)
-                    elif db_choice == 'neo4j':
+                    elif db_type == 'neo4j':
                         manager.upload_csv_to_nodes(csv_file)
-                    elif db_choice in ['mongodb', 'redis']:
+                    elif db_type in ['mongodb', 'redis']:
                         print("CSV upload not implemented for this database type")
 
                 elif choice == '4':
-                    if db_choice in ['postgresql', 'mysql']:
+                    if db_type in ['postgresql', 'mysql']:
                         table_name = input("Enter the table name to download: ")
                         manager.download_table_as_csv(table_name)
-                    elif db_choice == 'neo4j':
+                    elif db_type == 'neo4j':
                         label = input("Enter the node label to download: ")
                         manager.download_nodes_as_csv(label)
-                    elif db_choice in ['mongodb', 'redis']:
+                    elif db_type in ['mongodb', 'redis']:
                         print("CSV download not implemented for this database type")
 
                 elif choice == '5':
                     confirm = input("Are you sure you want to delete all data? (yes/no): ")
                     if confirm.lower() == 'yes':
-                        if db_choice in ['postgresql', 'mysql']:
+                        if db_type in ['postgresql', 'mysql']:
                             manager.delete_all_tables()
-                        elif db_choice == 'neo4j':
+                        elif db_type == 'neo4j':
                             manager.delete_all_nodes()
-                        elif db_choice == 'mongodb':
+                        elif db_type == 'mongodb':
                             for collection in manager.list_collections():
                                 manager.drop_collection(collection)
-                        elif db_choice == 'redis':
+                        elif db_type == 'redis':
                             manager.flush_all()
                     else:
                         print("Operation cancelled.")
 
                 elif choice == '6':
-                    if db_choice in ['postgresql', 'mysql']:
+                    if db_type in ['postgresql', 'mysql']:
                         table_name = input("Enter the table name to display its structure: ")
                         manager.display_table_structure(table_name)
-                    elif db_choice == 'neo4j':
+                    elif db_type == 'neo4j':
                         label = input("Enter the node label to display its structure: ")
                         manager.display_node_structure(label)
-                    elif db_choice == 'mongodb':
+                    elif db_type == 'mongodb':
                         collection_name = input("Enter the collection name: ")
                         documents = manager.find_documents(collection_name, {})
                         if documents:
@@ -880,14 +719,14 @@ def main():
                                 print(key)
                         else:
                             print(f"No documents found in collection '{collection_name}'")
-                    elif db_choice == 'redis':
+                    elif db_type == 'redis':
                         print("Structure display not applicable for Redis")
 
                 elif choice == '7':
-                    if db_choice in ['postgresql', 'mysql', 'neo4j']:
+                    if db_type in ['postgresql', 'mysql', 'neo4j']:
                         query = input("Enter your query: ")
                         manager.execute_custom_query(query)
-                    elif db_choice == 'redis':
+                    elif db_type == 'redis':
                         key = input("Enter the key to get value: ")
                         value = manager.get_value(key)
                         if value:
@@ -906,7 +745,7 @@ def main():
             except Exception as e:
                 print(Fore.RED + f"An error occurred: {str(e)}")
 
-        if db_choice in ['neo4j', 'mongodb', 'redis']:
+        if db_type in ['neo4j', 'mongodb', 'redis']:
             manager.close()
 
 if __name__ == "__main__":
