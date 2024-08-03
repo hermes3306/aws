@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order System</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        nav { margin-bottom: 20px; }
+        nav a { margin-right: 10px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Order System</h1>
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('login')">Login</a>
+        <a href="#" onclick="showPage('products')">Products</a>
+        <a href="#" onclick="showPage('cart')">Cart</a>
+        <a href="#" onclick="showPage('myOrders')">My Orders</a>
+    </nav>
+
+    <div id="home" class="page">
+        <h2>Home</h2>
+        <p>Welcome to our order system. Please login to start shopping.</p>
+    </div>
+
+    <div id="login" class="page hidden">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="products" class="page hidden">
+        <h2>Products</h2>
+        <div id="productList"></div>
+    </div>
+
+    <div id="cart" class="page hidden">
+        <h2>Cart</h2>
+        <ul id="cartItems"></ul>
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+
+    <div id="myOrders" class="page hidden">
+        <h2>My Orders</h2>
+        <div id="orderList"></div>
+    </div>
+
+    <script>
+        let token = '';
+        let cart = [];
+
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => page.classList.add('hidden'));
+            document.getElementById(pageId).classList.remove('hidden');
+            if (pageId === 'products') loadProducts();
+            if (pageId === 'myOrders') loadOrders();
+        }
+
+        async function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const response = await fetch('http://localhost:9000/token', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `username=${username}&password=${password}`
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                token = data.access_token;
+                alert('Login successful');
+                showPage('products');
+            } else {
+                alert('Login failed');
+            }
+        }
+
+        async function loadProducts() {
+            const response = await fetch('http://localhost:9000/products', {
+                headers: { 'Authorization': `Bearer ${token}` }
+            });
+            const products = await response.json();
+            const productList = document.getElementById('productList');
+            productList.innerHTML = products.map(product => `
+                <div class="product">
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <p>Price: $${product.price}</p>
+                    <p>In stock: ${product.inventory}</p>
+                    <button onclick="addToCart(${product.id})">Add to Cart</button>
+                </div>
+            `).join('');
+        }
+
+        function addToCart(productId) {
+            const existingItem = cart.find(item => item.product_id === productId);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ product_id: productId, quantity: 1 });
+            }
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItems = document.getElementById('cartItems');
+            cartItems.innerHTML = cart.map(item => `
+                <li>Product ID: ${item.product_id}, Quantity: ${item.quantity}</li>
+            `).join('');
+        }
+
+        async function placeOrder() {
+            const response = await fetch('http://localhost:9000/orders', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ items: cart })
+            });
+
+            if (response.ok) {
+                alert('Order placed successfully');
+                cart = [];
+                updateCartDisplay();
+                showPage('myOrders');
+            } else {
+                alert('Failed to place order');
+            }
+        }
+
+        async function loadOrders() {
+            const response = await fetch('http://localhost:9000/myorders', {
+                headers: { 'Authorization': `Bearer ${token}` }
+            });
+            const orders = await response.json();
+            const orderList = document.getElementById('orderList');
+            orderList.innerHTML = orders.map(order => `
+                <div class="order">
+                    <h3>Order #${order.id}</h3>
+                    <p>Status: ${order.status}</p>
+                    <p>Total Amount: $${order.total_amount}</p>
+                    <h4>Items:</h4>
+                    <ul>
+                        ${order.items.map(item => `
+                            <li>Product ID: ${item.product_id}, Quantity: ${item.quantity}, Price: $${item.price}</li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `).join('');
+        }
+
+        // Initialize the page
+        showPage('home');
+    </script>
+</body>
+</html>

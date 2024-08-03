@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>My Orders</h1>
+    {% for order in orders %}
+        <div class="order">
+            <h2>Order #{{ order.id }}</h2>
+            <p>Status: {{ order.status }}</p>
+            <p>Total Amount: ${{ order.total_amount }}</p>
+            <h3>Items:</h3>
+            <ul>
+            {% for item in order.order_items %}
+                <li>
+                    Product ID: {{ item.product_id }}, 
+                    Quantity: {{ item.quantity }}, 
+                    Price: ${{ item.price }}
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+    <script src="/static/script.js"></script>
+</body>
+</html>
