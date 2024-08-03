@@ -9,10 +9,51 @@ import csv
 import configparser
 from colorama import init, Fore, Style
 import urllib.parse
+import redis
 
 init(autoreset=True)  # Initialize colorama
 
-# ... (keep the existing PostgreSQLManager, Neo4jManager, and MongoDBManager classes)
+class RedisManager:
+    def __init__(self, config):
+        self.client = redis.Redis(
+            host=config['host'],
+            port=int(config['port']),
+            username=config['user'],
+            password=config['password'],
+            ssl=True
+        )
+
+    def test_connection(self):
+        try:
+            self.client.ping()
+            return True
+        except redis.ConnectionError as e:
+            print(f"Redis connection test failed: {e}")
+            return False
+
+    def set_value(self, key, value):
+        self.client.set(key, value)
+        print(f"Value set for key: {key}")
+
+    def get_value(self, key):
+        value = self.client.get(key)
+        if value:
+            return value.decode('utf-8')
+        return None
+
+    def delete_key(self, key):
+        self.client.delete(key)
+        print(f"Key deleted: {key}")
+
+    def list_keys(self, pattern='*'):
+        return [key.decode('utf-8') for key in self.client.keys(pattern)]
+
+    def flush_all(self):
+        self.client.flushall()
+        print("All keys have been flushed.")
+
+    def close(self):
+        self.client.close()
 
 class PostgreSQLManager:
     def __init__(self, config):
@@ -734,6 +775,8 @@ def main():
             manager = MongoDBManager(db_config)
         elif db_choice == 'mysql':
             manager = MySQLManager(db_config)
+        elif db_choice == 'redis':
+            manager = RedisManager(db_config)
         else:
             print(Fore.RED + f"Unsupported database type: {db_choice}")
             continue
@@ -758,6 +801,11 @@ def main():
                         print("\nCurrent collections:")
                         for collection in collections:
                             print(collection)
+                    elif db_choice == 'redis':
+                        keys = manager.list_keys()
+                        print("\nCurrent keys:")
+                        for key in keys:
+                            print(key)
 
                 elif choice == '2':
                     if db_choice in ['postgresql', 'mysql']:
@@ -777,6 +825,10 @@ def main():
                     elif db_choice == 'mongodb':
                         collection_name = input("Enter the new collection name: ")
                         manager.create_collection(collection_name)
+                    elif db_choice == 'redis':
+                        key = input("Enter the key: ")
+                        value = input("Enter the value: ")
+                        manager.set_value(key, value)
 
                 elif choice == '3':
                     csv_file = input("Enter the CSV file name: ")
@@ -784,8 +836,8 @@ def main():
                         manager.upload_csv_to_table(csv_file)
                     elif db_choice == 'neo4j':
                         manager.upload_csv_to_nodes(csv_file)
-                    elif db_choice == 'mongodb':
-                        print("CSV upload not implemented for MongoDB")
+                    elif db_choice in ['mongodb', 'redis']:
+                        print("CSV upload not implemented for this database type")
 
                 elif choice == '4':
                     if db_choice in ['postgresql', 'mysql']:
@@ -794,8 +846,8 @@ def main():
                     elif db_choice == 'neo4j':
                         label = input("Enter the node label to download: ")
                         manager.download_nodes_as_csv(label)
-                    elif db_choice == 'mongodb':
-                        print("CSV download not implemented for MongoDB")
+                    elif db_choice in ['mongodb', 'redis']:
+                        print("CSV download not implemented for this database type")
 
                 elif choice == '5':
                     confirm = input("Are you sure you want to delete all data? (yes/no): ")
@@ -807,6 +859,8 @@ def main():
                         elif db_choice == 'mongodb':
                             for collection in manager.list_collections():
                                 manager.drop_collection(collection)
+                        elif db_choice == 'redis':
+                            manager.flush_all()
                     else:
                         print("Operation cancelled.")
 
@@ -826,13 +880,22 @@ def main():
                                 print(key)
                         else:
                             print(f"No documents found in collection '{collection_name}'")
+                    elif db_choice == 'redis':
+                        print("Structure display not applicable for Redis")
 
                 elif choice == '7':
-                    query = input("Enter your query: ")
                     if db_choice in ['postgresql', 'mysql', 'neo4j']:
+                        query = input("Enter your query: ")
                         manager.execute_custom_query(query)
-                    elif db_choice == 'mongodb':
-                        print("Custom queries not implemented for MongoDB")
+                    elif db_choice == 'redis':
+                        key = input("Enter the key to get value: ")
+                        value = manager.get_value(key)
+                        if value:
+                            print(f"Value for key '{key}': {value}")
+                        else:
+                            print(f"No value found for key '{key}'")
+                    else:
+                        print("Custom queries not implemented for this database type")
 
                 elif choice == '8':
                     break
@@ -843,7 +906,7 @@ def main():
             except Exception as e:
                 print(Fore.RED + f"An error occurred: {str(e)}")
 
-        if db_choice in ['neo4j', 'mongodb']:
+        if db_choice in ['neo4j', 'mongodb', 'redis']:
             manager.close()
 
 if __name__ == "__main__":
