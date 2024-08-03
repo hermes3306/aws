@@ -30,17 +30,12 @@ class Product(Base):
     
     order_items = relationship("OrderItem", back_populates="product")
 
-
 class Order(Base):
-    __tablename__ = 'orders'
-    
+    __tablename__ = "orders"
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey('users.id'))
+    user_id = Column(Integer, ForeignKey("users.id"))
     status = Column(String)
     total_amount = Column(Float)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
-    
     user = relationship("User", back_populates="orders")
     order_items = relationship("OrderItem", back_populates="order")
 

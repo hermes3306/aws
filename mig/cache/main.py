@@ -6,6 +6,8 @@ from models import User, Product, Order, OrderItem
 from auth import get_current_user, create_access_token, get_password_hash, authenticate_user
 from pydantic import BaseModel
 from typing import List
+from fastapi.responses import RedirectResponse
+
 import redis
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
@@ -15,9 +17,23 @@ from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from database import get_db
 from auth import authenticate_user, create_access_token
+import logging
+from redis.exceptions import ConnectionError as RedisConnectionError
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
+from fastapi import Request
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app = FastAPI()
 
+# Mount static files
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+# Set up Jinja2 templates
+templates = Jinja2Templates(directory="templates")
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
@@ -104,44 +120,54 @@ def create_product(product: ProductCreate, db: Session = Depends(get_db), curren
 
 @app.post("/orders", response_model=OrderResponse)
 def create_order(order: OrderCreate, db: Session = Depends(get_db), redis: redis.Redis = Depends(get_redis), current_user: User = Depends(get_current_user)):
-    db_order = Order(user_id=current_user.id, status="pending", total_amount=0)
-    db.add(db_order)
-    db.commit()
-    db.refresh(db_order)
+    try:
+        db_order = Order(user_id=current_user.id, status="pending", total_amount=0)
+        db.add(db_order)
+        db.commit()
+        db.refresh(db_order)
 
-    total_amount = 0
-    order_items = []
+        total_amount = 0
+        order_items = []
 
-    for item in order.items:
-        product = db.query(Product).filter(Product.id == item.product_id).first()
-        if not product or product.inventory < item.quantity:
-            db.delete(db_order)
-            db.commit()
-            raise HTTPException(status_code=400, detail=f"Product {item.product_id} is not available in the requested quantity")
+        for item in order.items:
+            product = db.query(Product).filter(Product.id == item.product_id).first()
+            if not product or product.inventory < item.quantity:
+                db.delete(db_order)
+                db.commit()
+                raise HTTPException(status_code=400, detail=f"Product {item.product_id} is not available in the requested quantity")
 
-        order_item = OrderItem(order_id=db_order.id, product_id=item.product_id, quantity=item.quantity, price=product.price)
-        db.add(order_item)
-        total_amount += product.price * item.quantity
-        order_items.append({"product_id": item.product_id, "quantity": item.quantity, "price": product.price})
+            order_item = OrderItem(order_id=db_order.id, product_id=item.product_id, quantity=item.quantity, price=product.price)
+            db.add(order_item)
+            total_amount += product.price * item.quantity
+            order_items.append({"product_id": item.product_id, "quantity": item.quantity, "price": product.price})
 
-        # Update product inventory
-        product.inventory -= item.quantity
-        db.add(product)
+            # Update product inventory
+            product.inventory -= item.quantity
+            db.add(product)
 
-        # Update Redis cache
-        redis.set(f"product:{product.id}:inventory", product.inventory)
+            try:
+                # Update Redis cache
+                redis.set(f"product:{product.id}:inventory", product.inventory)
+            except RedisConnectionError:
+                logger.warning(f"Failed to update Redis cache for product {product.id}")
 
-    db_order.total_amount = total_amount
-    db_order.status = "completed"
-    db.add(db_order)
-    db.commit()
-    db.refresh(db_order)
+        db_order.total_amount = total_amount
+        db_order.status = "completed"
+        db.add(db_order)
+        db.commit()
+        db.refresh(db_order)
 
-    # Cache order status in Redis
-    redis.set(f"order:{db_order.id}:status", db_order.status)
+        try:
+            # Cache order status in Redis
+            redis.set(f"order:{db_order.id}:status", db_order.status)
+        except RedisConnectionError:
+            logger.warning(f"Failed to cache order status in Redis for order {db_order.id}")
 
-    return {"id": db_order.id, "user_id": db_order.user_id, "status": db_order.status, "total_amount": db_order.total_amount, "items": order_items}
-
+        return RedirectResponse(url="/myorders", status_code=303)
+    except Exception as e:
+        db.rollback()
+        logger.error(f"Error creating order: {e}")
+        raise HTTPException(status_code=500, detail="An error occurred while creating the order")
 
 @app.get("/users", response_model=List[UserResponse])
 def get_users(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
@@ -155,19 +181,32 @@ def get_user(user_id: int, db: Session = Depends(get_db), current_user: User = D
         raise HTTPException(status_code=404, detail="User not found")
     return user
 
+
+
+
+@app.get("/myorders", response_class=HTMLResponse)
+def get_my_orders(request: Request, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    try:
+        orders = db.query(Order).filter(Order.user_id == current_user.id).all()
+        return templates.TemplateResponse("myorder.html", {"request": request, "orders": orders})
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+    
 @app.get("/orders", response_model=List[OrderResponse])
-def get_orders(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
-    orders = db.query(Order).filter(Order.user_id == current_user.id).all()
-    return [{"id": order.id, "user_id": order.user_id, "status": order.status, "total_amount": order.total_amount, 
-             "items": [{"product_id": item.product_id, "quantity": item.quantity, "price": item.price} for item in order.order_items]} 
+def get_orders(db: Session = Depends(get_db)):
+    orders = db.query(Order).all()
+    print(f"Number of orders found: {len(orders)}")
+    return [{"id": order.id, 
+             "user_id": order.user_id, 
+             "status": order.status, 
+             "total_amount": order.total_amount, 
+             "items": [{"product_id": item.product_id, 
+                        "quantity": item.quantity, 
+                        "price": item.price} 
+                       for item in order.order_items]} 
             for order in orders]
 
-@app.get("/orders", response_model=List[OrderResponse])
-def get_orders(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
-    orders = db.query(Order).all()
-    return [{"id": order.id, "user_id": order.user_id, "status": order.status, "total_amount": order.total_amount, 
-             "items": [{"product_id": item.product_id, "quantity": item.quantity, "price": item.price} for item in order.order_items]} 
-            for order in orders]
 
 @app.get("/order_items", response_model=List[dict])
 def get_order_items(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):

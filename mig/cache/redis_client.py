@@ -1,26 +1,30 @@
 import redis
-import configparser
-import os
+from configparser import ConfigParser
+import logging
+import ssl
 
-# Get the current directory
-current_dir = os.path.dirname(os.path.abspath(__file__))
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-# Create a ConfigParser object
-config = configparser.ConfigParser()
+config = ConfigParser()
+config.read('db.ini')
 
-# Read the configuration file
-config.read(os.path.join(current_dir, 'db.ini'))
-
-# Get the Redis configuration
 redis_config = config['redis']
 
-redis_client = redis.Redis(
-    host=redis_config['host'],
-    port=int(redis_config['port']),
-    db=int(redis_config['db']),
-    username=redis_config['user'],
-    password=redis_config['password']
-)
-
 def get_redis():
-    return redis_client
+    try:
+        client = redis.from_url(
+            redis_config['url'],
+            decode_responses=True,
+            ssl_cert_reqs="none"
+        )
+        # Test the connection
+        client.ping()
+        logger.info("Successfully connected to Redis")
+        return client
+    except redis.ConnectionError as e:
+        logger.error(f"Failed to connect to Redis: {e}")
+        raise
+    except Exception as e:
+        logger.error(f"Unexpected error when connecting to Redis: {e}")
+        raise
