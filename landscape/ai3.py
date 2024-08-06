@@ -1,9 +1,10 @@
+import tkinter as tk
+from tkinter import ttk, filedialog
 import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import numpy as np
-from matplotlib.widgets import CheckButtons, Slider
-from tkinter import Tk, Menu
 
-# Categories and tools (same as before)
+# Define categories and tools (keep your existing definitions)
 categories = [
     "NLP", "ML Platforms", "Vector Databases", "Conversational AI", 
     "Predictive Analytics", "Computer Vision", "AI Chipsets", "AI in Healthcare",
@@ -23,94 +24,95 @@ tools = [
     [("V-REP", 6.0), ("Webots", 6.5), ("PyBullet", 7.0), ("OpenAI Gym", 7.5), ("Gazebo", 8.0), ("MoveIt", 8.5), ("ROS", 9.0), ("NVIDIA Isaac", 9.5)]
 ]
 
-# Create the main window
-root = Tk()
-root.withdraw()  # Hide the main window
+class AILandscapeViewer(tk.Tk):
+    def __init__(self):
+        super().__init__()
 
-# Create the menubar
-menubar = Menu(root)
+        self.title("AI Landscape Viewer")
+        self.geometry("1200x800")
 
-# Create the File menu
-file_menu = Menu(menubar, tearoff=0)
-file_menu.add_command(label="Save")
-file_menu.add_command(label="Exit", command=root.quit)
-menubar.add_cascade(label="File", menu=file_menu)
+        self.category_vars = [tk.BooleanVar(value=True) for _ in categories]
+        self.maturity_vars = [tk.BooleanVar(value=True) for _ in range(1, 11)]
+        self.font_size = 10
 
-# Create the Edit menu
-edit_menu = Menu(menubar, tearoff=0)
-edit_menu.add_command(label="Copy")
-edit_menu.add_command(label="Paste")
-menubar.add_cascade(label="Edit", menu=edit_menu)
+        self.create_menu()
+        self.create_plot()
 
-# Create the View menu
-view_menu = Menu(menubar, tearoff=0)
-menubar.add_cascade(label="View", menu=view_menu)
+    def create_menu(self):
+        menubar = tk.Menu(self)
+        self.config(menu=menubar)
 
-# Create the About menu
-about_menu = Menu(menubar, tearoff=0)
-menubar.add_cascade(label="About", menu=about_menu)
+        category_menu = tk.Menu(menubar, tearoff=0)
+        menubar.add_cascade(label="Category", menu=category_menu)
+        for i, category in enumerate(categories):
+            category_menu.add_checkbutton(label=category, variable=self.category_vars[i], command=self.update_plot)
 
-# Configure the root window to use the menubar
-root.config(menu=menubar)
+        maturity_menu = tk.Menu(menubar, tearoff=0)
+        menubar.add_cascade(label="Maturity", menu=maturity_menu)
+        for i in range(10):
+            maturity_menu.add_checkbutton(label=f"Level {i+1}", variable=self.maturity_vars[i], command=self.update_plot)
 
-fig, (ax, ax_check) = plt.subplots(1, 2, figsize=(20, 10), gridspec_kw={'width_ratios': [3, 1]})
-plt.subplots_adjust(left=0.1, right=0.95, bottom=0.2, top=0.9)
+        font_menu = tk.Menu(menubar, tearoff=0)
+        menubar.add_cascade(label="Font", menu=font_menu)
+        font_menu.add_command(label="Increase (+)", command=self.increase_font)
+        font_menu.add_command(label="Decrease (-)", command=self.decrease_font)
 
-ax.set_facecolor('white')
+        menubar.add_command(label="Print", command=self.print_plot)
 
-lines = []
-annotations = []
+    def create_plot(self):
+        self.fig, self.ax = plt.subplots(figsize=(10, 8))
+        self.canvas = FigureCanvasTkAgg(self.fig, master=self)
+        self.canvas_widget = self.canvas.get_tk_widget()
+        self.canvas_widget.pack(fill=tk.BOTH, expand=True)
 
-for i, category in enumerate(tools):
-    y = i
-    for tool, maturity in category:
-        line, = ax.plot(maturity, y, 'bo', markersize=5)
-        annotation = ax.annotate(tool, (maturity, y), xytext=(20, 20), textcoords='offset points', 
-                    fontsize=8, rotation=45, ha='left', va='bottom',
-                    arrowprops=dict(arrowstyle='->', color='blue', lw=0.5))
-        lines.append(line)
-        annotations.append(annotation)
+        self.update_plot()
 
-ax.set_yticks(range(len(categories)))
-ax.set_yticklabels(categories)
-ax.set_xticks(range(1, 11))
-ax.set_xlim(0.5, 10.5)
-ax.set_ylim(-0.5, len(categories) - 0.5)
+    def update_plot(self):
+        self.ax.clear()
+        
+        visible_categories = [cat for cat, var in zip(categories, self.category_vars) if var.get()]
+        min_maturity = min((level for level, var in enumerate(self.maturity_vars, 1) if var.get()), default=1)
+        max_maturity = max((level for level, var in enumerate(self.maturity_vars, 1) if var.get()), default=10)
+        
+        for i, (category, tools_in_category) in enumerate(zip(categories, tools)):
+            if category in visible_categories:
+                y = len(visible_categories) - 1 - visible_categories.index(category)
+                for tool, maturity in tools_in_category:
+                    if min_maturity <= maturity <= max_maturity:
+                        self.ax.plot(maturity, y, 'ko', markersize=5)
+                        self.ax.annotate(tool, (maturity, y), xytext=(15, 15), textcoords='offset points', 
+                                    fontsize=self.font_size, rotation=45, ha='left', va='bottom',
+                                    arrowprops=dict(arrowstyle='->', color='lightgray', lw=0.5))
+        
+        self.ax.set_yticks(range(len(visible_categories)))
+        self.ax.set_yticklabels(visible_categories[::-1], fontsize=self.font_size)
+        self.ax.set_xticks(range(min_maturity, max_maturity + 1))
+        self.ax.set_xticklabels(range(min_maturity, max_maturity + 1), fontsize=self.font_size)
+        self.ax.set_xlim(min_maturity - 0.5, max_maturity + 0.5)
+        self.ax.set_ylim(-0.5, len(visible_categories) - 0.5)
 
-ax.grid(True, color='blue', linestyle='-', linewidth=0.2)
-ax.set_title("AI Landscape: Technology Categories vs. Maturity Levels", fontsize=12)
-ax.set_xlabel("Maturity Level", fontsize=10)
-ax.set_ylabel("AI Technology Categories", fontsize=10)
+        self.ax.grid(True, color='lightgray', linestyle='-', linewidth=0.2)
+        self.ax.set_xlabel("Maturity Level", fontsize=self.font_size + 2)
+        self.ax.set_ylabel("AI Technology Categories", fontsize=self.font_size + 2)
+        
+        for spine in self.ax.spines.values():
+            spine.set_edgecolor('lightgray')
 
-# Add checkbuttons
-check = CheckButtons(ax_check, categories, [True] * len(categories))
+        self.canvas.draw()
 
-def func(label):
-    index = categories.index(label)
-    for line, annotation in zip(lines[index::len(categories)], annotations[index::len(categories)]):
-        line.set_visible(not line.get_visible())
-        annotation.set_visible(not annotation.get_visible())
-    plt.draw()
+    def increase_font(self):
+        self.font_size += 1
+        self.update_plot()
 
-check.on_clicked(func)
+    def decrease_font(self):
+        if self.font_size > 1:
+            self.font_size -= 1
+            self.update_plot()
 
-# Add font size slider
-ax_slider = plt.axes([0.1, 0.05, 0.3, 0.03])
-font_size_slider = Slider(ax_slider, 'Font Size', 6, 16, valinit=8, valstep=1)
+    def print_plot(self):
+        plt.savefig('ai_landscape.pdf', format='pdf', bbox_inches='tight')
+        print("Plot saved as 'ai_landscape.pdf'")
 
-def update_font_size(val):
-    font_size = int(val)
-    for annotation in annotations:
-        annotation.set_fontsize(font_size)
-    ax.set_title("AI Landscape: Technology Categories vs. Maturity Levels", fontsize=font_size+4)
-    ax.set_xlabel("Maturity Level", fontsize=font_size+2)
-    ax.set_ylabel("AI Technology Categories", fontsize=font_size+2)
-    plt.draw()
-
-font_size_slider.on_changed(update_font_size)
-
-plt.tight_layout()
-plt.show()
-
-# Start the Tkinter event loop
-root.mainloop()
+if __name__ == "__main__":
+    app = AILandscapeViewer()
+    app.mainloop()
