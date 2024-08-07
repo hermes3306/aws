@@ -4,6 +4,8 @@ import seaborn as sns
 import tkinter as tk
 from tkinter import ttk, filedialog
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning)
 
 # Set a professional color palette
 sns.set_palette("deep")
@@ -185,20 +187,27 @@ class AILandscapeViewer(tk.Tk):
         self.ax.set_facecolor('#f5f5f5')
         self.fig.patch.set_facecolor('#f5f5f5')
 
+
         sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
         sm.set_array([])
 
-        plt.subplots_adjust(right=0.85)
+        # Adjust the main plot area
+        self.fig.subplots_adjust(right=0.85)
 
-        if hasattr(self, 'cbar'):
-            self.cbar.remove()
+        # Create or update the colorbar
+        if not hasattr(self, 'cbar_ax'):
+            self.cbar_ax = self.fig.add_axes([0.87, 0.15, 0.02, 0.7])
+        else:
+            self.cbar_ax.clear()
 
-        cbar_ax = self.fig.add_axes([0.87, 0.15, 0.02, 0.7])
-        self.cbar = self.fig.colorbar(sm, cax=cbar_ax)
+        self.cbar = self.fig.colorbar(sm, cax=self.cbar_ax)
         self.cbar.set_label('Market Presence and Popularity', fontsize=self.font_size + 2)
 
-        plt.tight_layout(rect=[0, 0, 0.85, 1])
+        # Adjust layout without using tight_layout
+        self.fig.subplots_adjust(left=0.1, right=0.85, top=0.9, bottom=0.1)
+
         self.canvas.draw()
+        
 
     def create_search_bar(self):
         search_frame = ttk.Frame(self)
