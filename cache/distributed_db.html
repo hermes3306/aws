@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>확장된 분산 데이터베이스 제품 비교</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>확장된 분산 데이터베이스 제품 비교</caption>
+        <thead>
+            <tr>
+                <th>제품명</th>
+                <th>분류</th>
+                <th>장점</th>
+                <th>단점</th>
+                <th>RDBMS 기능 점수 (1-10)</th>
+                <th>분산 Scale-out 점수 (1-10)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AWS Aurora</td>
+                <td>클라우드 네이티브 RDBMS</td>
+                <td>
+                    <ul>
+                        <li>높은 성능과 가용성</li>
+                        <li>자동 스케일링</li>
+                        <li>MySQL 및 PostgreSQL 호환</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>AWS에 종속</li>
+                        <li>비용이 높을 수 있음</li>
+                    </ul>
+                </td>
+                <td>9</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Alibaba PolarDB</td>
+                <td>클라우드 네이티브 RDBMS</td>
+                <td>
+                    <ul>
+                        <li>고성능</li>
+                        <li>MySQL, PostgreSQL, Oracle 호환</li>
+                        <li>빠른 확장</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Alibaba Cloud에 종속</li>
+                    </ul>
+                </td>
+                <td>8</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>CockroachDB</td>
+                <td>분산 SQL 데이터베이스</td>
+                <td>
+                    <ul>
+                        <li>강력한 일관성</li>
+                        <li>수평적 확장성</li>
+                        <li>PostgreSQL 호환</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>복잡한 쿼리에서 성능 저하 가능</li>
+                    </ul>
+                </td>
+                <td>9</td>
+                <td>9</td>
+            </tr>
+            <!-- More rows for other products... -->
+            <tr>
+                <td>Goldilocks</td>
+                <td>In-Memory 데이터베이스</td>
+                <td>
+                    <ul>
+                        <li>고성능</li>
+                        <li>ACID 트랜잭션 지원</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>인지도가 상대적으로 낮음</li>
+                    </ul>
+                </td>
+                <td>8</td>
+                <td>7</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
