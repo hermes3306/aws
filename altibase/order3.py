@@ -108,7 +108,6 @@ def get_tables(cursor):
     """)
     return [(row.USER_NAME, row.TABLE_NAME) for row in cursor.fetchall()]
 
-
 def display_table(cursor, table_name):
     cursor.execute(f"SELECT * FROM {table_name}")
     rows = cursor.fetchall()
