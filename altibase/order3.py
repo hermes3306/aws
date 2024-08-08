@@ -5,19 +5,41 @@ import tkinter as tk
 from tkinter import ttk, messagebox, simpledialog
 
 # Connection string
+# conn_str = (
+#     "DRIVER={Altibase};"
+#     "SERVER=localhost;"
+#     "PORT=20300;"
+#     "UID=sys;"
+#     "PWD=manager;"
+#     "DATABASE=mydb;"
+# )
+
 conn_str = (
-    "DRIVER={Altibase};"
-    "SERVER=localhost;"
-    "PORT=20300;"
+    "DSN=Altibase;"
     "UID=sys;"
     "PWD=manager;"
     "DATABASE=mydb;"
 )
 
+# conn_str = (
+#     "DRIVER={ALTIBASE_HDB_ODBC_64bit};"
+#     "SERVER=localhost;"
+#     "PORT=20300;"
+#     "UID=sys;"
+#     "PWD=manager;"
+#     "DATABASE=mydb;"
+# )
+
 def create_connection():
     try:
-        return pyodbc.connect(conn_str)
+        conn = pyodbc.connect(conn_str)
+        print("Connection successful")
+        return conn
     except pyodbc.Error as ex:
+        sqlstate = ex.args[1]
+        print(f"Error connecting to database:")
+        print(f"SQL State: {sqlstate}")
+        print(f"Error message: {ex}")
         messagebox.showerror("Connection Error", f"Failed to connect to database: {ex}")
         return None
 
