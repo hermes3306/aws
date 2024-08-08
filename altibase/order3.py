@@ -204,6 +204,12 @@ class AltibaseGUI:
 
         # Configure the treeview to use scrollbars
         self.tree.configure(yscrollcommand=self.vsb.set, xscrollcommand=self.hsb.set)
+        
+        # Configure the overall style
+        style = ttk.Style(self.master)
+        style.theme_use("clam")  # You can try different themes like "alt", "default", "classic"
+        style.configure("Treeview", background="#F0F0F0", fieldbackground="#F0F0F0", foreground="black")
+        style.map('Treeview', background=[('selected', '#4A6984')])
 
         # Pack the treeview
         self.tree.pack(expand=True, fill='both')
@@ -268,9 +274,16 @@ class AltibaseGUI:
             self.tree.heading("#0", text="Index")
             self.tree.column("#0", width=50, stretch=tk.NO)
 
+            # Style configuration for alternating row colors
+            self.tree.tag_configure('oddrow', background='#E8E8E8')
+            self.tree.tag_configure('evenrow', background='#F5F5F5')
+
+            # Configure headings style
+            style = ttk.Style()
+            style.configure("Treeview.Heading", font=('Helvetica', 10, 'bold'))
+
             for col in columns:
                 self.tree.heading(col, text=col)
-                # Set a minimum width for each column
                 self.tree.column(col, width=100, stretch=tk.NO)
 
             for i, row in enumerate(rows, start=1):
@@ -280,19 +293,21 @@ class AltibaseGUI:
                         formatted_row.append(item.strftime('%Y-%m-%d %H:%M:%S'))
                     else:
                         formatted_row.append(str(item))
-                self.tree.insert("", "end", text=str(i), values=formatted_row)
+                
+                # Apply alternating row colors
+                tag = 'evenrow' if i % 2 == 0 else 'oddrow'
+                self.tree.insert("", "end", text=str(i), values=formatted_row, tags=(tag,))
 
             # Adjust column widths based on content
             for col in columns:
                 max_width = max(self.font.measure(str(row[columns.index(col)])) for row in rows)
                 header_width = self.font.measure(col)
-                self.tree.column(col, width=max(max_width, header_width) + 10)
+                self.tree.column(col, width=max(max_width, header_width) + 20)
 
         except pyodbc.Error as ex:
             messagebox.showerror("Error", f"Failed to load table data: {ex}")
         finally:
             cursor.close()
-
 
 def main():
     root = tk.Tk()
