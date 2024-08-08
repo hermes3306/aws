@@ -3,6 +3,8 @@ import random
 from datetime import datetime, timedelta
 import tkinter as tk
 from tkinter import ttk, messagebox, simpledialog
+import tkinter.font as tkFont
+
 
 # Connection string
 # conn_str = (
@@ -163,12 +165,16 @@ class AltibaseGUI:
         self.master.title("Altibase Database Manager")
         self.master.geometry("800x600")
         
+        self.font = tkFont.Font()
+
         self.conn = create_connection()
         if not self.conn:
             self.master.quit()
             return
         
         self.create_widgets()
+
+
 
     def create_widgets(self):
         # Generate Schema button
@@ -181,12 +187,33 @@ class AltibaseGUI:
         self.table_dropdown.pack(pady=10)
         self.table_dropdown.bind("<<ComboboxSelected>>", self.load_table_data)
 
-        # Table view
-        self.tree = ttk.Treeview(self.master)
-        self.tree.pack(expand=True, fill='both', padx=10, pady=10)
+        # Create a frame to hold the treeview and scrollbars
+        self.tree_frame = ttk.Frame(self.master)
+        self.tree_frame.pack(expand=True, fill='both', padx=10, pady=10)
+
+        # Create the treeview
+        self.tree = ttk.Treeview(self.tree_frame)
+
+        # Create vertical scrollbar
+        self.vsb = ttk.Scrollbar(self.tree_frame, orient="vertical", command=self.tree.yview)
+        self.vsb.pack(side='right', fill='y')
+
+        # Create horizontal scrollbar
+        self.hsb = ttk.Scrollbar(self.tree_frame, orient="horizontal", command=self.tree.xview)
+        self.hsb.pack(side='bottom', fill='x')
+
+        # Configure the treeview to use scrollbars
+        self.tree.configure(yscrollcommand=self.vsb.set, xscrollcommand=self.hsb.set)
+
+        # Pack the treeview
+        self.tree.pack(expand=True, fill='both')
 
         # Populate table dropdown
         self.update_table_list()
+
+        # Create font for measurements
+        self.font = tkFont.Font()
+        
 
     def generate_schema(self):
         num_records = simpledialog.askinteger("Input", "Enter number of records to generate:", 
@@ -223,7 +250,7 @@ class AltibaseGUI:
             messagebox.showerror("Error", f"Failed to retrieve table list: {ex}")
         finally:
             cursor.close()
-            
+        
 
     def load_table_data(self, event):
         table_full_name = self.table_var.get()
@@ -239,18 +266,33 @@ class AltibaseGUI:
             self.tree.delete(*self.tree.get_children())
             self.tree['columns'] = columns
             self.tree.heading("#0", text="Index")
-            self.tree.column("#0", width=50)
+            self.tree.column("#0", width=50, stretch=tk.NO)
 
             for col in columns:
                 self.tree.heading(col, text=col)
-                self.tree.column(col, width=100)
+                # Set a minimum width for each column
+                self.tree.column(col, width=100, stretch=tk.NO)
 
             for i, row in enumerate(rows, start=1):
-                self.tree.insert("", "end", text=str(i), values=row)
+                formatted_row = []
+                for item in row:
+                    if isinstance(item, datetime):
+                        formatted_row.append(item.strftime('%Y-%m-%d %H:%M:%S'))
+                    else:
+                        formatted_row.append(str(item))
+                self.tree.insert("", "end", text=str(i), values=formatted_row)
+
+            # Adjust column widths based on content
+            for col in columns:
+                max_width = max(self.font.measure(str(row[columns.index(col)])) for row in rows)
+                header_width = self.font.measure(col)
+                self.tree.column(col, width=max(max_width, header_width) + 10)
+
         except pyodbc.Error as ex:
             messagebox.showerror("Error", f"Failed to load table data: {ex}")
         finally:
             cursor.close()
+
 
 def main():
     root = tk.Tk()
