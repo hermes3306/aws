@@ -101,23 +101,33 @@ def insert_sample_data(cursor, num_records):
 
 def get_tables(cursor):
     try:
-        # First, try the original query
+        # First, try to get just the table names
         cursor.execute("""
-        SELECT USER_NAME, TABLE_NAME
+        SELECT TABLE_NAME
         FROM SYSTEM_.SYS_TABLES_
         WHERE TABLE_TYPE = 'T'
-        ORDER BY USER_NAME, TABLE_NAME
+        ORDER BY TABLE_NAME
         """)
-    except pyodbc.Error:
-        # If that fails, try a more generic query
-        cursor.execute("""
-        SELECT SCHEMA_NAME, TABLE_NAME
-        FROM SYSTEM_.SYS_TABLES_
-        WHERE TABLE_TYPE = 'T'
-        ORDER BY SCHEMA_NAME, TABLE_NAME
-        """)
-    
-    return [(row[0], row[1]) for row in cursor.fetchall()]
+        tables = cursor.fetchall()
+        
+        # Now, let's try to get the owner for each table
+        result = []
+        for table in tables:
+            try:
+                cursor.execute(f"SELECT USER_ID FROM SYSTEM_.SYS_TABLES_ WHERE TABLE_NAME = '{table[0]}'")
+                user_id = cursor.fetchone()[0]
+                cursor.execute(f"SELECT USER_NAME FROM SYSTEM_.SYS_USERS_ WHERE USER_ID = {user_id}")
+                user_name = cursor.fetchone()[0]
+                result.append((user_name, table[0]))
+            except pyodbc.Error:
+                # If we can't get the owner, just use 'UNKNOWN'
+                result.append(('UNKNOWN', table[0]))
+        
+        return result
+    except pyodbc.Error as ex:
+        print(f"Error in get_tables: {ex}")
+        # If all else fails, return an empty list
+        return []
 
 def display_table(cursor, table_name):
     cursor.execute(f"SELECT * FROM {table_name}")
@@ -179,12 +189,18 @@ class AltibaseGUI:
         cursor = self.conn.cursor()
         try:
             tables = get_tables(cursor)
-            self.table_dropdown['values'] = [f"{user}.{table}" for user, table in tables]
             if tables:
+                self.table_dropdown['values'] = [f"{user}.{table}" for user, table in tables]
                 self.table_dropdown.set(f"{tables[0][0]}.{tables[0][1]}")
                 self.load_table_data(None)
+            else:
+                messagebox.showwarning("No Tables", "No tables found in the database.")
+                self.table_dropdown['values'] = []
+        except pyodbc.Error as ex:
+            messagebox.showerror("Error", f"Failed to retrieve table list: {ex}")
         finally:
             cursor.close()
+
 
     def load_table_data(self, event):
         table_full_name = self.table_var.get()
