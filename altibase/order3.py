@@ -185,6 +185,7 @@ class AltibaseGUI:
         finally:
             cursor.close()
 
+    
     def update_table_list(self):
         cursor = self.conn.cursor()
         try:
@@ -200,7 +201,7 @@ class AltibaseGUI:
             messagebox.showerror("Error", f"Failed to retrieve table list: {ex}")
         finally:
             cursor.close()
-
+            
 
     def load_table_data(self, event):
         table_full_name = self.table_var.get()
