@@ -11,11 +11,10 @@ warnings.filterwarnings("ignore", category=UserWarning)
 sns.set_palette("deep")
 plt.style.use('seaborn-v0_8-whitegrid')
 
-# Define categories and tools with popularity scores
 categories = [
     "NLP", "ML Platforms", "Vector Databases", "Conversational AI", 
     "Predictive Analytics", "Computer Vision", "AI Chipsets", "AI in Healthcare",
-    "AI in Cybersecurity", "Robotics", "AI Cloud"
+    "AI in Cybersecurity", "Robotics", "AI Cloud", "AutoML"
 ]
 
 tools = [
@@ -26,8 +25,7 @@ tools = [
     
     # ML Platforms
     [("TensorFlow", 10.0), ("SageMaker", 9.1), ("Azure ML", 8.2), ("Databricks", 7.3), 
-     ("DataRobot", 6.4), ("H2O.ai", 5.5), ("RapidMiner", 4.6), ("KNIME", 3.7), 
-     ("MindsDB", 2.8)],
+     ("DataRobot", 6.4), ("H2O.ai", 5.5), ("RapidMiner", 4.6), ("KNIME", 3.7)],
     
     # Vector Databases
     [("pgvector", 10.0), ("Pinecone", 8.7), ("Faiss", 7.4), ("Chroma", 6.1), 
@@ -67,7 +65,12 @@ tools = [
     # AI Cloud
     [("AWS SageMaker", 10.0), ("Google Cloud AI", 8.5), ("Microsoft Azure AI", 7.0), 
      ("IBM Watson Cloud", 5.5), ("Alibaba Cloud AI", 4.0), ("Huawei Cloud AI", 2.5), 
-     ("Oracle AI Cloud", 1.0)]
+     ("Oracle AI Cloud", 1.0)],
+    
+    # AutoML (New category)
+    [("Google Cloud AutoML", 10.0), ("H2O.ai AutoML", 9.2), ("DataRobot AutoML", 8.5),
+     ("Azure AutoML", 7.8), ("Auto-Sklearn", 7.1), ("TPOT", 6.4), 
+     ("Auto-Keras", 5.7), ("AutoGluon", 5.0), ("PyCaret", 4.3), ("MindsDB", 3.6)]
 ]
 
 
