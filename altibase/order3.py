@@ -100,13 +100,24 @@ def insert_sample_data(cursor, num_records):
             order_item_id += 1
 
 def get_tables(cursor):
-    cursor.execute("""
-    SELECT USER_NAME, TABLE_NAME
-    FROM SYSTEM_.SYS_TABLES_
-    WHERE TABLE_TYPE = 'T'
-    ORDER BY USER_NAME, TABLE_NAME
-    """)
-    return [(row.USER_NAME, row.TABLE_NAME) for row in cursor.fetchall()]
+    try:
+        # First, try the original query
+        cursor.execute("""
+        SELECT USER_NAME, TABLE_NAME
+        FROM SYSTEM_.SYS_TABLES_
+        WHERE TABLE_TYPE = 'T'
+        ORDER BY USER_NAME, TABLE_NAME
+        """)
+    except pyodbc.Error:
+        # If that fails, try a more generic query
+        cursor.execute("""
+        SELECT SCHEMA_NAME, TABLE_NAME
+        FROM SYSTEM_.SYS_TABLES_
+        WHERE TABLE_TYPE = 'T'
+        ORDER BY SCHEMA_NAME, TABLE_NAME
+        """)
+    
+    return [(row[0], row[1]) for row in cursor.fetchall()]
 
 def display_table(cursor, table_name):
     cursor.execute(f"SELECT * FROM {table_name}")
