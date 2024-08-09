@@ -1,0 +1,4 @@
+select * from SYSTEM_.SYS_TABLES_
+select * from USERS
+select * from PRODUCTS
+select * from orders

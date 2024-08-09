@@ -6,6 +6,7 @@ from tkinter import ttk, messagebox, simpledialog, scrolledtext
 import tkinter.font as tkFont
 import tkinter as tk
 from tkinter import ttk, scrolledtext
+import os
 
 
 # Connection string
@@ -110,9 +111,9 @@ def insert_sample_data(cursor, num_records):
     order_item_id = 1
     for order_id in range(1, num_records + 1):
         user_id = random.randint(1, num_records)
-        order_date = datetime.now() - timedelta(days=random.randint(0, 365))
+        order_date = datetime.datetime.now()
         cursor.execute("INSERT INTO Orders (order_id, user_id, order_date) VALUES (?, ?, ?)",
-                       (order_id, user_id, order_date))
+                    (order_id, user_id, order_date))
 
         for _ in range(random.randint(1, 3)):  # 1 to 3 items per order
             product_id = random.randint(1, 5)
@@ -156,6 +157,7 @@ def display_table(cursor, table_name):
     rows = cursor.fetchall()
     columns = [column[0] for column in cursor.description]
     return columns, rows
+
 class AltibaseGUI:
     def __init__(self, master):
         self.master = master
@@ -181,6 +183,10 @@ class AltibaseGUI:
 
         self.conn = create_connection()
         self.create_widgets()
+        self.clear_current_query = None
+        self.query_history = []  # List to store query history
+        self.max_history = 10  # Maximum number of queries to keep in history
+        self.load_query_history()
         
         if not self.conn:
             messagebox.showerror("Connection Error", "Failed to connect to the database. The application will have limited functionality.")
@@ -265,6 +271,33 @@ class AltibaseGUI:
         self.log_text.see(tk.END)
 
 
+
+    def load_query_history(self):
+        """Load the query history from the file."""
+        history_file = "query_history.txt"
+        if os.path.exists(history_file):
+            try:
+                with open(history_file, "r") as file:
+                    self.query_history = [query.strip() for query in file.readlines()]
+                self.update_history_tabs()
+                self.log_message(f"Query history loaded from {history_file}", "info")
+            except IOError as ex:
+                self.log_message(f"Error loading query history: {ex}", "error")
+        else:
+            self.query_history = []
+
+    def save_query_history(self):
+        """Save the query history to a file."""
+        history_file = "query_history.txt"
+        try:
+            with open(history_file, "w") as file:
+                for query in self.query_history:
+                    file.write(query + "\n")
+            self.log_message(f"Query history saved to {history_file}", "info")
+        except IOError as ex:
+            self.log_message(f"Error saving query history: {ex}", "error")
+
+
     def create_orders_tab(self):
         # Generate Schema button
         generate_btn = ttk.Button(self.orders_tab, text="Generate Schema", command=self.generate_schema)
@@ -308,7 +341,7 @@ class AltibaseGUI:
         # Default query
         default_query = "select * from SYSTEM_.SYS_TABLES_"
         self.query_text.insert(tk.END, default_query)
-        
+
             # Button frame
         button_frame = ttk.Frame(self.database_tab)
         button_frame.pack(fill='x', padx=10, pady=5)
@@ -322,8 +355,13 @@ class AltibaseGUI:
         clear_btn.pack(side='left', padx=5)
 
         # Query history tabs
-        self.history_notebook = ttk.Notebook(self.database_tab)
-        self.history_notebook.pack(fill='x', padx=10, pady=5)
+        self.history_frame = ttk.Frame(self.database_tab)
+        self.history_frame.pack(fill='x', padx=10, pady=5)
+        self.history_notebook = ttk.Notebook(self.history_frame)
+        self.history_notebook.pack(fill='x', expand=True)
+        self.history_notebook.bind("<<NotebookTabChanged>>", self.on_history_tab_selected)
+
+
 
         # Result display area
         result_frame = ttk.Frame(self.database_tab)
@@ -371,15 +409,31 @@ class AltibaseGUI:
 
         return tree
             
-    def add_query_tab(self, query):
-        tab = ttk.Frame(self.history_notebook)
-        self.history_notebook.add(tab, text=f"Query {self.history_notebook.index('end') + 1}")
-        text = scrolledtext.ScrolledText(tab, height=10)
-        text.pack(fill='both', expand=True)
-        text.insert(tk.END, query)
-        text.config(state='disabled')  # Make it read-only
-        self.history_notebook.select(tab)
 
+    def update_history_tabs(self):
+        # Clear existing tabs
+        for tab in self.history_notebook.winfo_children():
+            tab.destroy()
+        
+        # Add tabs for each query in history
+        for i, query in enumerate(self.query_history):
+            tab = ttk.Frame(self.history_notebook)
+            self.history_notebook.add(tab, text=f"Query {i+1}")
+            
+            text = scrolledtext.ScrolledText(tab, height=3)
+            text.pack(fill='both', expand=True)
+            text.insert(tk.END, query)
+            text.config(state='disabled')  # Make it read-only
+
+    def on_history_tab_selected(self, event):
+        selected_tab = self.history_notebook.select()
+        if selected_tab:
+            tab_index = self.history_notebook.index(selected_tab)
+            query = self.query_history[tab_index]
+            
+            # Update the main query text area
+            self.query_text.delete("1.0", tk.END)
+            self.query_text.insert(tk.END, query)
 
     def display_query_results(self, columns, rows, tree):
         if tree is None:
@@ -465,6 +519,7 @@ class AltibaseGUI:
         finally:
             cursor.close()
 
+
     def execute_query(self):
         query = self.query_text.get("1.0", tk.END).strip()
 
@@ -480,12 +535,34 @@ class AltibaseGUI:
             self.display_query_results(columns, rows, self.database_tree)
             self.log_message("Query executed successfully", "info")
             
-            # Add new tab with this query
+            # Add query to history
             self.add_query_tab(query)
+            self.save_query_history()
         except pyodbc.Error as ex:
             self.log_message(f"Error executing query: {ex}", "error")
         finally:
             cursor.close()
+
+
+    def add_query_tab(self, query):
+        # Clear existing tabs
+        for tab in self.history_notebook.winfo_children():
+            tab.destroy()
+
+        # Add tabs for each query in history
+        self.query_history.append(query)
+        self.query_history = self.query_history[-self.max_history:]  # Keep only the last 10 queries
+
+        for i, query in enumerate(self.query_history):
+            tab = ttk.Frame(self.history_notebook)
+            self.history_notebook.add(tab, text=f"Query {i+1}")
+            
+            text = scrolledtext.ScrolledText(tab, height=3)
+            text.pack(fill='both', expand=True)
+            text.insert(tk.END, query)
+            text.config(state='disabled')  # Make it read-only
+
+        self.save_query_history()
 
 
 def main():
