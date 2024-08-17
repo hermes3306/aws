@@ -12,7 +12,7 @@ import math
 
 # Strava API settings (unchanged)
 CLIENT_ID = "67174"
-CLIENT_SECRET = "e6b45fcea5836d356bb3c81908b5dbdaa363b1ed"
+CLIENT_SECRET = "11deb64d5fc70d28aed865992a6792f28edce3c6"
 REDIRECT_URI = "http://localhost:8000"
 SCOPE = "activity:write,activity:read_all"
 
