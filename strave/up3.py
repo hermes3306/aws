@@ -15,7 +15,6 @@ CLIENT_ID = "67174"
 CLIENT_SECRET = "11deb64d5fc70d28aed865992a6792f28edce3c6"
 REDIRECT_URI = "http://localhost:8000"
 SCOPE = "activity:write,activity:read_all"
-
 AUTH_URL = f"https://www.strava.com/oauth/authorize?client_id={CLIENT_ID}&redirect_uri={REDIRECT_URI}&response_type=code&scope={SCOPE}"
 TOKEN_URL = "https://www.strava.com/oauth/token"
 UPLOAD_URL = "https://www.strava.com/api/v3/uploads"
