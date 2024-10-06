@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "Evening Run",
+  "distance": 11197.7,
+  "moving_time": 4692,
+  "elapsed_time": 4756,
+  "total_elevation_gain": 25.0,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": 0,
+  "id": 8040878601,
+  "start_date": "2022-10-30T08:07:37Z",
+  "start_date_local": "2022-10-30T17:07:37Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 2,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a8040878601",
+    "summary_polyline": "a}fdFyymfWXCZMb@EVBZEb@W\\EHQFCj@IPIHIFWBANDjAAXFX@ZMb@Gn@AXHr@Qx@@d@A^Bv@_@pBDlAEXGp@HzABh@CbAFPD`@`@F@z@IH]Du@b@iBp@aBz@eCd@{CCs@Hm@HY\\s@De@Rs@JSZuBPg@TsA@g@H_AXq@Hs@HQL}@Lg@?cAHo@@aCOwAWeAKQs@aCi@kAcB}BaA{@g@o@m@m@s@e@YYwC_CiAiAq@YYY}@m@IQAg@EIIGaAWe@a@]MKSYS]KWWaAe@eAw@wBiCa@SO?SJGEIQKg@MOOYUQOSs@c@OOa@kAo@YYU]q@k@a@_@_@gB_CYUQ]eAWSCa@QeAaAo@QiCgA}Aw@o@OkCiAgAk@Y]KGa@Mm@GuA]g@a@sAq@i@e@oB{@{@i@_Bo@c@Kg@Ww@SoAe@]WyAo@s@w@a@M]k@M_@GEoBm@k@Ym@Si@YYI_AAiAIi@@OCMGuAAqAFmAGs@Ns@EmANi@?q@HuBCSH}@@m@JaBBq@Lc@AUFY@sAPUId@A`@DrBYpAEVGhAG^K`BMv@BVGr@EdA?j@O|@?z@KTDb@ATE\\HtAHp@JPC~AFr@Kb@Lh@DTPf@RN@VLR@^LRRd@Ll@^h@HJLL`@JLP\\`B|@lA`@hAj@\\Hn@`@rAd@bBz@b@\\nAn@x@Jz@\\l@Nf@j@bBh@XT`@PPBd@\\xAv@pBz@pAt@|@`@x@Rt@ZdAr@hAd@z@h@\\h@x@ZjAlAV\\pAjAJLTl@lCfCZj@Jd@h@Zp@`Ax@r@DJp@XbAx@P@~AtAd@Jh@j@r@f@bBr@DJAl@JRnAj@lAjA`An@PRr@l@d@XTTDPFD|@b@pAv@fAbAPXf@d@f@z@f@jATv@NZ@Xf@vBLjBBdCQtBw@vEcBzKMf@[v@Oj@C\\Bp@Ib@Er@M~@K`@y@fBc@vAK\\_@rBQZk@XWBUA]OiBIoBCOIW?qCLeA?]Fa@PyA?qANaB@s@NG?UQI?[P{@Ju@^WTw@JcAXe@Hg@Nc@T]DORaAZUL[?cAp@OZWXSHYBeBr@?JBNZzA@VDLIXKLX]RR]aA[wABUJOJA?EUA[RQGIM?GP]",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.56171070039272,
+    127.05088877119124
+  ],
+  "end_latlng": [
+    37.56308072246611,
+    127.05198219045997
+  ],
+  "average_speed": 2.387,
+  "max_speed": 4.944,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 25.6,
+  "elev_low": 15.7,
+  "upload_id": 8604795873,
+  "upload_id_str": "8604795873",
+  "external_id": "E52323E7-8913-4635-B0B6-E5CDBD3C3F7F-activity.fit",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

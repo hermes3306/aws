@@ -1,0 +1,63 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "Evening Run",
+  "distance": 8882.6,
+  "moving_time": 3430,
+  "elapsed_time": 3620,
+  "total_elevation_gain": 21.0,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": null,
+  "id": 11305988879,
+  "start_date": "2024-05-01T09:58:50Z",
+  "start_date_local": "2024-05-01T18:58:50Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 1,
+  "kudos_count": 2,
+  "comment_count": 0,
+  "athlete_count": 2,
+  "photo_count": 0,
+  "map": {
+    "id": "a11305988879",
+    "summary_polyline": "smhdF}iofWx@MRKFOBg@Aa@K_@G_@SYAMBKJQFWN[FCFGEUGOCWFw@HYf@[NAHH\\q@`@a@^GHG`@EXINKTWVk@HKZi@L_@Zg@d@eANSh@gA\\_AR_@Re@Tc@Lc@d@i@f@gADCLBJm@Vi@Rk@`AyBVe@Pg@lBoDLa@\\q@Lo@HWJMt@}AJa@Vk@D_@FMV_@L]JKXFl@BTDJHDANe@Zk@^kABOKM}@i@G?ABVR@HA@MAg@QYOk@e@QMkCcAaGoCaDiB]OaAYyBcAc@U{@]o@]oBmAu@[y@U_Ae@]Ko@Yk@]kAi@{@e@g@SQSg@y@USgCkAq@UyAa@gAUw@BwAMk@@wDCoCPs@@wAJqBHs@@qBP{CLm@FwDRu@H_ABkAJe@?{@FoAHqAT}@Ve@Ja@b@c@Pm@X{@j@sAbAk@VyAlAyArAu@h@g@\\cCvBe@\\QFWXmEpDoBvAy@b@_FjD{@`@_A^c@JoAVcC\\MHKRKDs@F_BFXCtACXCFCTWRMbBKpA]r@KdAc@`Ak@XKxB_BrBqAzAsAfBcAt@u@l@e@f@q@VWjCeBj@i@|B}AxAoAn@e@xA{@pCyBj@Yp@YTWPIzCi@v@CZEtAE~DU`BGx@InFYnAMnFMdBQlCIvCHR?TEVHn@HnAExBb@j@Tx@VtAn@f@PTRn@jANNnCrAbAh@tB`A~@^fAZRJj@b@xAz@`DzArBj@\\L~@l@zCxAxEvB`C~@TN`@^ZTj@PN@BGGIOIAC@C`Ah@DD@HKh@Wx@Y^C`@CDCA",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.567785,
+    127.05967166
+  ],
+  "end_latlng": [
+    37.56081454,
+    127.07081383
+  ],
+  "average_speed": 2.59,
+  "max_speed": 4.89,
+  "average_cadence": 83.0,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 29.0,
+  "elev_low": 17.2,
+  "upload_id": 12077161683,
+  "upload_id_str": "12077161683",
+  "external_id": "3300300748-1714557530-run.tcx",
+  "from_accepted_tag": false,
+  "pr_count": 1,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

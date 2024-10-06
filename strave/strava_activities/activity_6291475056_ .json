@@ -1,0 +1,61 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "오후 걷기",
+  "distance": 5350.6,
+  "moving_time": 4172,
+  "elapsed_time": 5524,
+  "total_elevation_gain": 6.9,
+  "type": "Walk",
+  "sport_type": "Walk",
+  "id": 6291475056,
+  "start_date": "2021-11-20T05:00:15Z",
+  "start_date_local": "2021-11-20T14:00:15Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 2,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a6291475056",
+    "summary_polyline": "wb|cFwj~fWc@A[Je@EQB{@E]FYGUDa@CKCY@YH_@?QDa@A_ANOAe@H[Au@LQ?YF_@D_CMS\\KDm@@w@Hi@AYFcA?m@L[CQFa@D{Ab@SNQAEBWL[HWNc@LcBt@c@HGFG@OCIEKOUAKDOTu@NCBWLq@b@_@LOHIDQ?WHg@TYZk@Li@^]Ha@XK@GASBSLM@WHWFKAOWUEI@EFMb@Cd@Qb@@\\i@~@E\\Qd@EVOXCP@n@Qj@ELe@J@XQb@_@`BANMZAJQ^Ql@Sd@UXiA`@u@NC?WNi@@QDKAc@Lo@?k@Tg@Bw@L[RWJ_@\\QDy@b@MDMROF}@p@WH_@VkAPMCUBQ?_@Lm@JeA^?TKJGLQNUDY?QBUHI\\]t@CNING^c@|@GT?HSt@a@~@APUTCLEDACSG]Yo@a@e@_AWWM?Qa@QOCCOBO[CCG?SWWEa@[IIOEQJI\\MLa@vAe@t@IXAN@\\CZEHIFUd@[lAEHSj@S`Aa@`ACR_@`@KT_@zA?LV\\L^BBXAHBZBJDNZJJPJFHLFH@D?BETqALSFCP]TeBHADGL_@BU?WDOJKR_@H]LUL]bAsAJc@NeAFMBUDOVSLa@HGBQOc@]YS@k@QUWWKUYg@U[e@UGQ@c@OGMI?GQ]c@MGQ@IYJe@Xo@@ILKT[Vg@^i@FY@c@P[Jw@Pe@Be@LSBGCGFOTc@CAHIB@?C?E\\mBCW@UD?TWBWJQHYAOGGJo@AOFQJk@Ry@?UGOI@KC[WUKWBUQMAg@M",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.502227,
+    127.136464
+  ],
+  "end_latlng": [
+    37.527508,
+    127.133143
+  ],
+  "average_speed": 1.283,
+  "max_speed": 2.878,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 27.1,
+  "elev_low": 18.4,
+  "upload_id": 6686687855,
+  "upload_id_str": "6686687855",
+  "external_id": "09C09F2C-0896-4D3D-BC57-C76D7D9A13EF",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

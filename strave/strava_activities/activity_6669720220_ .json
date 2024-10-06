@@ -1,0 +1,63 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "오후 걷기",
+  "distance": 17250.0,
+  "moving_time": 14639,
+  "elapsed_time": 16367,
+  "total_elevation_gain": 44.8,
+  "type": "Walk",
+  "sport_type": "Walk",
+  "id": 6669720220,
+  "start_date": "2022-02-12T04:42:10Z",
+  "start_date_local": "2022-02-12T13:42:10Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 3,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a6669720220",
+    "summary_polyline": "e`{cF_r}fWjAcDj@cAo@}@?c@oE_GoA}Ae@YIa@c@i@kCcC]DQXg@GqAbAiCCiETq@TCMQAaA@iTz@a@NCd@eBYCuAo@jA]LmHXaCd@yFdCkBZoBnA_Cp@aB|@gEzAoAt@_C|E@VCVUh@DJKZ[Xk@Fc@f@BZ\\X{@fDw@pBaAv@sJvAoDxAoAr@}B`B[Zk@Nq@\\UXJd@?l@IJm@Nu@[_@HsAjA{@tAe@vA]rBc@r@_@xAH|A_BCWNKVe@nDCjDFbAtBdNVjDb@~@RJ^r@Lx@[^?vBc@jBKtGLlEEvDJjTGhHDtFInBDbEJxAl@`CUzAo@r@c@~@Q^Cd@t@r@lBv@rAdAhAnBjBjFd@|BA`An@pAf@~Dr@vDPXnCxAXb@n@nB@~@n@p@L|@hCfHbApEYRANv@|Dl@lFvAnRd@tJLnFGrMDt@k@~JiErc@]bF^dDIp@Bv@d@pCj@p@r@d@fB^GdAORN|@Dd@n@?l@W~@Ap@YhBQr@T~AUh@YDNz@ITMXBbBg@`AJnFk@n@VNzBAREABj@R`@b@MPPn@]jEk@h@LJTHg@f@n@O^HVjB{BY^RMn@RXs@ZIvCUZX|@YzAAPSlAPJM`@?xAa@x@B|Ba@~@?nDq@dHcDdBiBl@aAn@g@Nc@v@ANo@h@?`@k@nBkAvBgBTkGQIMSGa@SMy@oASwBF[UYRoCA{@z@oHFgBR}@PiATyBZeBXq@TuAGSn@g@Ja@Fo@KQAYFo@vB}Kh@oBZu@XaCzByJLaCNe@l@}@h@eB^{BxBcJFm@`A}BTmBhC}KlCkKTe@|AgG\\s@b@mBbAsBTiAd@g@E]l@w@~BsG^yACcAb@o@PuAr@GVNxAeCxDyEhAeBrAg@pCkB^EFq@Ai@{BcHNc@n@k@GGi@Xw@h@?LHA?Q]c@IgAa@s@Ke@WUG[KMKwAe@w@Ig@@a@c@g@DOSi@MiAS]]qAQ{Bq@iEa@mBg@aAAaAQ_@?e@O_@BM{@s@Fw@CYOUHe@OYIo@W[CYJ[Mm@[w@Ni@Ka@m@sA{BmCqAkDY_@i@Yo@y@_@oA]g@A}@gAw@Gw@JiAq@cAAYWSKo@Yk@O@AOoAi@]u@yAq@W?",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.499285,
+    127.131849
+  ],
+  "end_latlng": [
+    37.497689,
+    127.126474
+  ],
+  "average_speed": 1.178,
+  "max_speed": 4.322,
+  "has_heartrate": true,
+  "average_heartrate": 80.0,
+  "max_heartrate": 80.0,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": true,
+  "elev_high": 45.0,
+  "elev_low": 12.1,
+  "upload_id": 7092959577,
+  "upload_id_str": "7092959577",
+  "external_id": "86BF4ABF-1E7A-43A2-9A7F-F363FEBC7880",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

@@ -1,0 +1,63 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "\uc624\ud6c4 \ud558\uc774\ud0b9",
+  "distance": 7001.0,
+  "moving_time": 7701,
+  "elapsed_time": 11637,
+  "total_elevation_gain": 462.8,
+  "type": "Hike",
+  "sport_type": "Hike",
+  "id": 7096153773,
+  "start_date": "2022-05-06T05:34:22Z",
+  "start_date_local": "2022-05-06T14:34:22Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 42,
+  "kudos_count": 2,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a7096153773",
+    "summary_polyline": "qxddF{mwfW?JOEO?qBXOAUQe@Iw@PYXODEAACJAc@Ba@W]g@U}@YYYo@UeBK}AYiBCcBIs@C?WFWdAQTB\\?p@Sh@OHQEIY{@o@a@BII_AWMK_@EIYe@g@WE_@FOSWNWFKPKUIEi@?KMKC{@IUKuA_@WEc@CUBo@PUBsB?WPs@P{@^[Zc@l@UVSZs@\\o@nBs@t@Sf@g@v@Sj@WPWHEDG\\G@GSs@CoBx@GFI@kAQmBQMBDBG?GCJFG?m@i@KOWS{@U_@UuAf@YOy@YMKk@YMDkBcAKA[Du@?OCY@s@OMGmBe@q@K_@?]BWEaAFkCg@kBg@ACi@Ko@E[@kAUc@AYQ_@Bq@Ik@Uu@o@s@ESEGEGYs@g@_@SMA_@Ra@MMIMUMMOW]aBa@{@Si@WkAGOQSQGAg@I?Go@Ku@Yq@?QF[l@gAL_@j@w@HBEFi@p@sA~Ba@h@JCXNPXRp@BVH\\d@~@d@xA\\p@Tz@ZbB^f@n@\\HNBXCRs@h@QTm@xAIHG?WR@t@Bb@QjBGFAJYJIFQHEFIl@MPC@EPEES?WTO\\In@?v@XTRVNXF^HBHHPn@f@j@BxAAtA^t@PRHJNDJLNJJVFb@XdAPT`@t@Vv@d@bAX`@F?C`@GLMh@DH}Ab@KVI@QEQPBRCP[^MXMJEPDFNFZEXD|@IPBXPZf@V?VCHBTGh@?^h@Ld@?ZGb@Bb@Jl@?rAGf@Wb@i@r@UR[dAe@x@K\\_@j@GBFEH?DJG\\VHPJTGNKLC?@I\\Y\\_A\\i@NCHBx@EXE|@BzBEDKE]WME}ABEBGJ}AnAcASi@J[Ny@fBSn@Ab@BJ?h@_@h@{@rBYlAi@vASv@?`@ZN",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.549053,
+    127.101265
+  ],
+  "end_latlng": [
+    37.57474,
+    127.08526
+  ],
+  "average_speed": 0.909,
+  "max_speed": 4.512,
+  "has_heartrate": true,
+  "average_heartrate": 124.8,
+  "max_heartrate": 154.0,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": true,
+  "elev_high": 344.6,
+  "elev_low": 37.4,
+  "upload_id": 7554332653,
+  "upload_id_str": "7554332653",
+  "external_id": "shealthe1bce0f0-cc80-4fb7-82d3-a2b4078e6e61.tcx",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

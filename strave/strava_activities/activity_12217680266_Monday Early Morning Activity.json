@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "Monday Early Morning Activity",
+  "distance": 26102.3,
+  "moving_time": 3276,
+  "elapsed_time": 26204,
+  "total_elevation_gain": 152.3,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": null,
+  "id": 12217680266,
+  "start_date": "2021-06-06T15:54:15Z",
+  "start_date_local": "2021-06-07T00:54:15Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 0,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a12217680266",
+    "summary_polyline": "_~zcFan}fWy@t@pAi@iCrBAMFOUKUCd@An@h@o@DEK]b@t@m@\\Au@PAWBR}Bj@tBm@AJjBHyAjBRoBnCeByDtC|BgAoBRhAcBxBgA{CjD~BRqCaAhBnAcCe@zBcAyB`A~Aa@oBAzA_@sAt@sA~A|AuArC|@mHBjDCqBc@bE@aBTS{BuCbCaI~NoLjRgJdU~E}FdGlCpEnFlFlHfFrKvFzMfIpQ|EdTlL~j@`CxL{CtMsCjLyXvmAmCdSbIx^`@tBdBjK~@nChCzOvEdT`@xDhExMzEdMnDbKlHdRfHxSbApDpJvWn@lC|BhN~@|NxCha@|AbRvBtX`BtUfD|a@`C~LhBfI\\tC`Mh\\dE~InB|FtNf`@~D~Ob@|PsCtUU~BqClOiHxm@IvMD`Cl@zOrEzh@sDpP_ElNgMtb@}IbOyD~IkBlc@oDje@mCpH}EvNsHfToLh^eAzDiCfVhAzn@pTzf@pEpSd@nUyBhOgBxCwAvCkCzD~AxDlBtAl@wD",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.49872559,
+    127.13201463
+  ],
+  "end_latlng": [
+    37.48614517,
+    126.89768139
+  ],
+  "average_speed": 7.968,
+  "max_speed": 17.208,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 86.6,
+  "elev_low": 18.1,
+  "upload_id": 13025152347,
+  "upload_id_str": "13025152347",
+  "external_id": "last_run.gpx",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

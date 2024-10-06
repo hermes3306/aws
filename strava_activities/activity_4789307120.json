@@ -1,0 +1,61 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "\uc810\uc2ec \uac77\uae30",
+  "distance": 7396.2,
+  "moving_time": 3291,
+  "elapsed_time": 3397,
+  "total_elevation_gain": 19.6,
+  "type": "Walk",
+  "sport_type": "Walk",
+  "id": 4789307120,
+  "start_date": "2021-02-15T03:01:58Z",
+  "start_date_local": "2021-02-15T12:01:58Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 2,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a4789307120",
+    "summary_polyline": "wa|cFck~fWu@Dm@JeADc@C_ABUEwABw@J_@HgA?aAJaBJWJkBLu@LCGGAc@?g@@g@FeAB{BLiB^uAd@cA`@e@Z_@Lk@\\UJw@DSDa@DUTq@`@cBx@c@N[HwAj@oBn@KHk@Vy@XWNg@d@W`@g@tAw@vAENAP@JELSl@u@pAAb@Op@c@zAKPMf@KNSl@Wj@k@Xa@b@SJmA^u@JWA_@RQC_@?s@Fy@TcATGDGJeAd@y@b@s@l@y@l@]L[FGFSDgAn@I@k@CUG}BgAEEBCLAf@JB?LQDAN?VGtAIt@An@O`@UBGLATKTYVSb@a@|CsA`@Y\\Ob@Gb@OhBMZ?l@GJCl@_@d@Md@_@@KTQ\\a@x@aCNYZgA\\y@Fa@HQFEH@PRPDJJ@ABMGQBAA@?CLQCW@KVg@JMD?ELEF?C@?LY?QBQ\\i@D??ADUHUV]Z]zBeADK^Ev@YA@LCjAk@p@WHIJ@\\KvB_AzA{@ZCRGZ?p@g@b@Uz@]VE\\OLKLCH?f@QNAJEF?xAYt@AJC|@Cp@GHIB?A@@BX@bBIHBj@j@vLyEsGnBk@V?BnCE`@KfA@|BWt@@LIl@@TRLKJDPEdAG\\GxAEPGT?DID?\\Fd@ErADf@Il@Bz@ET@t@IFEBKIg@EIM?k@HcDPM@KF]AYCa@?K@QFa@?M@aAAw@Fu@@MF@JNb@LB^A~@IpAEH?DH\\Kp@Cb@BVEdAE|@BVCd@@ZIL?JKBSI_@KCoBRUAm@DcADWAYBs@AUBoBBc@HOLk@@GB?BBZDDF@p@IrAE",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.501844,
+    127.137252
+  ],
+  "end_latlng": [
+    37.501832,
+    127.136985
+  ],
+  "average_speed": 2.247,
+  "max_speed": 31.3,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 26.5,
+  "elev_low": 18.2,
+  "upload_id": 5110633254,
+  "upload_id_str": "5110633254",
+  "external_id": "d0195ced-cd2d-462c-8f07-ff5d458cd392-activity.fit",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

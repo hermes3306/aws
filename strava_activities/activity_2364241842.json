@@ -1,0 +1,61 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "\uc57c\uac04 \ud558\uc774\ud0b9",
+  "distance": 3924.6,
+  "moving_time": 1113,
+  "elapsed_time": 1199,
+  "total_elevation_gain": 38.2,
+  "type": "Hike",
+  "sport_type": "Hike",
+  "id": 2364241842,
+  "start_date": "2019-05-13T13:58:45Z",
+  "start_date_local": "2019-05-13T22:58:45Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 0,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a2364241842",
+    "summary_polyline": "ei`dFsz}fW\\JVALBL?p@PPED@VNTDJ?RVLBNJNARHDGPyAFCn@CTEJ@l@C^LDHXBHBNN\\Pv@PXJF?HEDKTk@FIBAr@JFFJZJFV@TGZCDB?DDGE@d@JNNf@VHTXBZIN?T@x@PTJ^H\\LHFt@Hf@Vj@Pf@^jAd@xAr@hA^\\VHBd@Vj@d@r@b@d@^BHn@j@RL`@LrA|@l@XZJj@ZfBb@R@tA|@`@Pz@x@\\PL@JFBDVN`@d@r@`@~@hATb@\\HNNZHBFCBH?DDPBFAZNHBJLHj@DNFFN?f@Zd@Nx@Ld@J^P|@Pz@b@h@d@d@Zv@^HSPFb@VNBHGFQDUJOLo@PONW^WHUBk@HYJUB[FUDKRW@OIk@BID]HQPQ?GJO@IFI^oBJINBLFT?JJNFJHTBRCPFLLH@h@\\`@z@PRfApBxBtCHHTFVN`@DV?PJPZBRh@bAX?LCVXF?NA`@i@H?ZJVDFGPENOBGBw@F_@Ro@h@{@Re@Fe@E]FU`@i@TSZEHEd@i@LW",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.526774,
+    127.134154
+  ],
+  "end_latlng": [
+    37.499775,
+    127.131988
+  ],
+  "average_speed": 3.526,
+  "max_speed": 7.1,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 46.9,
+  "elev_low": 20.0,
+  "upload_id": 2514903282,
+  "upload_id_str": "2514903282",
+  "external_id": "5FA4056B-71CD-4812-A6CA-16B412E46FE8",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+  version="1.1"
+  creator="Runkeeper - http://www.runkeeper.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"
+  xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1">
+<trk>
+  <name><![CDATA[Running 1/28/19 1:54 pm]]></name>
+  <time>2019-01-28T06:54:44Z</time>
+<trkseg>
+<trkpt lat="37.461063000" lon="126.427297000"><ele>1.0</ele><time>2019-01-28T06:54:44Z</time></trkpt>
+<trkpt lat="37.461088000" lon="126.426890000"><ele>0.9</ele><time>2019-01-28T07:33:00Z</time></trkpt>
+<trkpt lat="37.461187000" lon="126.426892000"><ele>0.8</ele><time>2019-01-28T07:33:05Z</time></trkpt>
+<trkpt lat="37.461326000" lon="126.427010000"><ele>0.7</ele><time>2019-01-28T07:33:08Z</time></trkpt>
+<trkpt lat="37.461360000" lon="126.427152000"><ele>0.6</ele><time>2019-01-28T07:33:10Z</time></trkpt>
+<trkpt lat="37.461423000" lon="126.427307000"><ele>0.5</ele><time>2019-01-28T07:33:13Z</time></trkpt>
+<trkpt lat="37.460988000" lon="126.428637000"><ele>0.5</ele><time>2019-01-28T07:33:30Z</time></trkpt>
+<trkpt lat="37.460909000" lon="126.428928000"><ele>0.4</ele><time>2019-01-28T07:33:32Z</time></trkpt>
+<trkpt lat="37.460868000" lon="126.429057000"><ele>0.3</ele><time>2019-01-28T07:33:34Z</time></trkpt>
+<trkpt lat="37.460761000" lon="126.429149000"><ele>0.1</ele><time>2019-01-28T07:33:36Z</time></trkpt>
+<trkpt lat="37.460661000" lon="126.429241000"><ele>-0.1</ele><time>2019-01-28T07:33:38Z</time></trkpt>
+<trkpt lat="37.460585000" lon="126.429330000"><ele>-0.3</ele><time>2019-01-28T07:33:40Z</time></trkpt>
+<trkpt lat="37.460481000" lon="126.429420000"><ele>-0.3</ele><time>2019-01-28T07:33:42Z</time></trkpt>
+<trkpt lat="37.460008000" lon="126.429828000"><ele>-0.3</ele><time>2019-01-28T07:33:52Z</time></trkpt>
+<trkpt lat="37.459920000" lon="126.429885000"><ele>-0.3</ele><time>2019-01-28T07:33:53Z</time></trkpt>
+<trkpt lat="37.459806000" lon="126.429966000"><ele>-0.3</ele><time>2019-01-28T07:33:54Z</time></trkpt>
+<trkpt lat="37.459719000" lon="126.430021000"><ele>-0.2</ele><time>2019-01-28T07:33:55Z</time></trkpt>
+<trkpt lat="37.459633000" lon="126.430092000"><ele>-0.1</ele><time>2019-01-28T07:33:56Z</time></trkpt>
+<trkpt lat="37.459456000" lon="126.430124000"><ele>0.0</ele><time>2019-01-28T07:33:58Z</time></trkpt>
+<trkpt lat="37.459305000" lon="126.430107000"><ele>0.1</ele><time>2019-01-28T07:34:00Z</time></trkpt>
+<trkpt lat="37.459158000" lon="126.430127000"><ele>0.4</ele><time>2019-01-28T07:34:02Z</time></trkpt>
+<trkpt lat="37.459006000" lon="126.430201000"><ele>0.7</ele><time>2019-01-28T07:34:04Z</time></trkpt>
+<trkpt lat="37.458851000" lon="126.430279000"><ele>1.1</ele><time>2019-01-28T07:34:06Z</time></trkpt>
+<trkpt lat="37.458706000" lon="126.430359000"><ele>1.5</ele><time>2019-01-28T07:34:08Z</time></trkpt>
+<trkpt lat="37.457525000" lon="126.431034000"><ele>1.8</ele><time>2019-01-28T07:34:28Z</time></trkpt>
+<trkpt lat="37.457142000" lon="126.432180000"><ele>2.2</ele><time>2019-01-28T07:34:39Z</time></trkpt>
+<trkpt lat="37.456743000" lon="126.432716000"><ele>2.4</ele><time>2019-01-28T07:34:49Z</time></trkpt>
+<trkpt lat="37.456621000" lon="126.432880000"><ele>2.6</ele><time>2019-01-28T07:34:53Z</time></trkpt>
+<trkpt lat="37.453856000" lon="126.435313000"><ele>2.8</ele><time>2019-01-28T07:35:02Z</time></trkpt>
+<trkpt lat="37.453643000" lon="126.435657000"><ele>3.0</ele><time>2019-01-28T07:35:06Z</time></trkpt>
+<trkpt lat="37.452908000" lon="126.436617000"><ele>3.3</ele><time>2019-01-28T07:35:20Z</time></trkpt>
+</trkseg>
+</trk>
+</gpx>

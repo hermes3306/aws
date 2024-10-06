@@ -1,0 +1,63 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "Night Run",
+  "distance": 4978.5,
+  "moving_time": 1913,
+  "elapsed_time": 1926,
+  "total_elevation_gain": 72.2,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": null,
+  "id": 12490036329,
+  "start_date": "2024-09-23T12:41:38Z",
+  "start_date_local": "2024-09-23T21:41:38Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 0,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a12490036329",
+    "summary_polyline": "{lhdFshofWP[f@o@ESMQAO@]CWOe@SSa@KKBMLO^EPCZGPKLOFEFCJBhAHTLp@NZFVJVN@FEFKLg@PQXQNYZw@D_@AY@_@Gs@GYe@Og@AWCO@GBQV?h@M^MNEZBP?d@BVL^D^JZ@TBHZATQLe@\\g@L]\\e@BKCWSy@@MHQCa@SQQA_@MSBKDUTEVMd@a@p@GZFj@Lh@Th@Hj@HRXBFEJOD]FO^a@Tg@RGDKD[AgAQiAEKYSIA[FYLYXUNQv@QZGR@p@BNZj@J`@Hn@?LG^Mb@@Vr@fA^Xd@n@FARs@P{@ZaAXo@r@kA^e@F?FFp@~@Xt@^\\r@vAt@dAZn@`@d@PLF@HETa@TUd@{@p@w@BMEMg@i@M]e@w@WSSWiAqB_@e@s@iAKEO?GDKP_AvBUXEPl@nAVz@d@fAhA~AN\\JJXNn@p@HBLMHU\\Yz@uATSFO?GGQa@g@Q_@u@aAkAsB_ByBUWQAKJc@r@e@nAS^ENz@dCVf@LZfAdBJLv@n@PXTXH@NALMFOZc@Rc@r@w@LYAIOUa@e@K[u@gAKU}@wA_B_CMIICO?IFw@zA_@`AGJ[ZQZw@nBS^GPKNO^Yd@OZIFQIU_@k@g@SWM[K]?OJ[PQZIh@q@To@n@{@DUA}AKm@EG[O{@CWd@CLSFMNEVMZG|@@NRp@TrAHBb@A",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.567668,
+    127.05946133
+  ],
+  "end_latlng": [
+    37.56784207,
+    127.05895842
+  ],
+  "average_speed": 2.602,
+  "max_speed": 4.875,
+  "average_cadence": 81.6,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 35.7,
+  "elev_low": 18.5,
+  "upload_id": 13316729537,
+  "upload_id_str": "13316729537",
+  "external_id": "3300300748-1727095298-Run.tcx",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

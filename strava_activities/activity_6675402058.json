@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "\uc624\ud6c4 \ub2ec\ub9ac\uae30",
+  "distance": 14944.9,
+  "moving_time": 6466,
+  "elapsed_time": 6509,
+  "total_elevation_gain": 18.1,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": 0,
+  "id": 6675402058,
+  "start_date": "2022-02-13T06:18:31Z",
+  "start_date_local": "2022-02-13T15:18:31Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 4,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a6675402058",
+    "summary_polyline": "}yzcFi_~fWHgAx@oAKAU|@i@v@_@hAUJU?qA{AoAcB_@Y[o@kAqA]o@eAcAa@YW]_Aq@Wk@Ce@On@En@kAvAeA^eCGwAH}BBUFm@Ki@PqCXq@BiB?gACwARaC@qAHoAVwBIu@ZaEFiBLoCl@mElBo@d@yB`@_Ar@_@NOPq@ZELa@Vk@PaCf@m@Hq@Ta@ZcAZo@t@a@`Bq@jAIx@Qj@gAf@BDEb@B`@QfAoAzDk@~@cCnA_HdAm@Ro@\\}@`@a@JiD~B{@Vc@VcAx@CXDh@GXSVc@Du@]a@PgBfB_@t@Ul@Wx@U~A_@p@Yz@Eh@JbACPWFiBKKFELBr@MjAGrABxEHdAdAnGDl@\\vAHlA@hADXv@nAf@fAMfCBTWbCQj@Ad@@hAE`@?tCF|BEzEBfFClAF`CEdA@pDEhC?pBDx@BxDG~@Hz@ItAFhEDX^x@Tz@WbBSd@Y~@e@t@CLf@Xf@r@xCdBhAbCfBbFx@nD\\bAt@pA~ChG^xCr@vBj@hAh@tADT?PJj@|AfETpA^fAf@rB@NUJGJ?H\\|A^xBp@xFJxBLpANbDF`@@f@Fb@Bt@PnBF`BN`BNlEAz@JzA?rFKpFDb@OvAIjC_@zFo@rF]`F_@|CAh@o@~FE`AWvB]~DBX`@jBCfCZrBn@bAjAz@fAf@HVEjCDNT@jBYjCWL@t@Qh@Cf@OhCMn@U~BCrAYn@CbAUlBFRHJh@@v@Hr@@ZFf@DBpAa@lAMr@QpACf@MfALd@A`@IFDbCw@p@C\\Hx@ArDa@t@Ah@F\\KfAGdCa@hA?n@Kz@AdDw@`Ac@bAWd@Yr@i@rBwBZQ^i@^O\\a@p@c@f@i@l@OhAiAp@_@tBkBRIFOGc@DoBJsBIKKASO{@yBIo@[w@I]Ii@@_@VgC@aA\\mCDw@Ny@?c@LeAPm@ZgBLc@@e@ZmBAe@Js@ZgATc@AW\\sCTwAt@sCf@yCv@gDTg@L_BJg@d@wAh@mCp@kCDY?iBVy@j@s@\\aAh@_CDc@h@aCFm@~AyFHe@Vw@R_@Dw@Ry@\\y@H}@h@qAJsANm@H{@lAgDn@sCf@sA`AeE`AsCP_@JcAf@uAf@o@\\{Ad@u@Je@TS~@kD^q@Ri@TcBd@q@h@yAXc@",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.498357,
+    127.134051
+  ],
+  "end_latlng": [
+    37.489734,
+    127.106138
+  ],
+  "average_speed": 2.311,
+  "max_speed": 4.816,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 37.5,
+  "elev_low": 12.1,
+  "upload_id": 7099096163,
+  "upload_id_str": "7099096163",
+  "external_id": "E63163EA-25A1-40CC-BA05-19ECD9254F58",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

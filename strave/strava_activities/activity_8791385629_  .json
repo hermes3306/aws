@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "야간 트레일 달리기",
+  "distance": 5004.2,
+  "moving_time": 2304,
+  "elapsed_time": 3165,
+  "total_elevation_gain": 106.0,
+  "type": "Run",
+  "sport_type": "TrailRun",
+  "workout_type": 0,
+  "id": 8791385629,
+  "start_date": "2023-03-28T12:26:24Z",
+  "start_date_local": "2023-03-28T21:26:24Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 1,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a8791385629",
+    "summary_polyline": "qcidF{qofWKAGIWIYJi@Ac@SM?IEKK@c@AESSMBQPWJSBe@Gw@@[LMB?UFSAM@i@CSc@UOWQS_@s@G]CCG?OZSNG@EAMYKKISIGSCMOI[EGCEUIY@[Ga@@SCGDDFv@\\RNDDBH?NQhAALXbBAHCBI@[GQGc@A]@aAKICKO]wCM_@y@q@_@GWAo@YmA_A[_@M@KNWD[AUHSNc@BGNAFHd@?LUZGn@@DCJCGBGENDIAKBCBAAI@CB@?GEGMEEBS^CBk@_@MBUAWFCCDG?EWCAC?ARKZI@EE?Q@e@AAA@CN@PCPI@CsAHAEDAR?FAVWVM?GQCACDERMKQWQKSSSIDQEMD_@MK@QESD[L[@WFM@i@COGKDKT?B@F@M@@BAACC@DFACC?AAD@C??AA@@E@BAD?CE?BA@@LQHAH@NNJ@NMFAL@`AQPGTCXDVLNGNFDAFENLL^RHDFFZHbAp@`@BH@HFFJ?BIB?NLHGH_@LIHABCGw@@I@CVEVMTEP@RGVMH?DKF?TPNFj@r@\\FTVh@ZVAZLf@t@f@dDHPXHt@E\\L\\?d@BBA@D?CFBRE@QKUGe@M]JUBO?U@CBk@CWSEOIQEUQAE@CD?@BCBFDH@h@A`@DZHFBLRHRHFZFFFL@@FH@?LGLD@JBREJGJABIDCLr@TVZj@RN^N@LATCLCD?ABHAHBJ?TDHFCBINGRCjA?b@GNILKHAD@HJHVBVLLR@\\N\\BN?NIB?^Vb@NPZBN?LDJFBFEBKT{ADGN?XHDBFNF?PNF@FKBYI[IEOFMb@BHXHRADDA^@LC?C`AFRFDD?BS?YDWHUTa@jA@RC`@F",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.56958348676562,
+    127.06071563065052
+  ],
+  "end_latlng": [
+    37.5674123223871,
+    127.0590793993324
+  ],
+  "average_speed": 2.172,
+  "max_speed": 5.964,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 107.9,
+  "elev_low": 18.9,
+  "upload_id": 9434581737,
+  "upload_id_str": "9434581737",
+  "external_id": "43096e6e-c9df-470c-9909-0d5540ee3895-activity.fit",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

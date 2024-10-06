@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "Wangjing Bejing morning run 240420",
+  "distance": 5719.9,
+  "moving_time": 2222,
+  "elapsed_time": 2371,
+  "total_elevation_gain": 30.9,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": 0,
+  "id": 11219789807,
+  "start_date": "2024-04-19T22:43:41Z",
+  "start_date_local": "2024-04-20T06:43:41Z",
+  "timezone": "(GMT+08:00) Asia/Shanghai",
+  "utc_offset": 28800.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 1,
+  "comment_count": 0,
+  "athlete_count": 2,
+  "photo_count": 0,
+  "map": {
+    "id": "a11219789807",
+    "summary_polyline": "{hasFe_|eUZn@CCAK@RLv@FNPV?Z?EKB@G?DE@}@bBKXMNGV{@zAERKP]Vs@nAK^UXI@QQCD@ZM`@GHG@YOISOMQUSQGA[m@SUKSg@e@w@eAWWWOEKYYWOSSGQYWEIa@]s@}@QIUa@]W[c@Q[k@o@IOCUACQIUg@WcAGmAA{BGc@Qg@CW?IGHUDwAb@MHc@NSP]REH]VMDWTG@GFGRMHMTa@`@G@CCSY[_@QKY_@Gm@GOOCMIIOuAwA_@c@G?OEUOO[_Au@KUGEY[UKOc@OOYo@o@k@OW_@UIQ[[GUUUCK[g@GEA@SScA}@m@q@YSCIAQQCc@a@QIo@y@UQKUS[QU[WKUKOEKIEQOKWg@e@w@iA{@aAIQAIDOJE^e@p@m@FAJMRGl@m@RQ~AkBBKGQGEMc@q@oAE_@Yw@a@s@?OBOTu@DYFQCS?WLc@DYz@]ZB^Nd@]R[P{@@c@Cm@@QRo@@YJ[\\m@FCJ?JFLBFFF@ZIVDBB`AQp@FLKZEH@VEJC^FXLFFLFVHF?HE`@Ef@MVAJCp@Bf@L`@FTJh@HRNDA\\^^VP\\PP?HJRBRRZZVPRVRLAFEBMX]`@w@TMFA|@|@NDjA`ABNCn@ZRXb@j@f@\\PXXtAf@ZTCR?LDPPN\\`@`@TPPJ`@Zt@Jf@V`@FBH@b@GL@HFPVv@h@DJDZBH`@THZPVTJ\\XNH\\f@NNT`@b@Zf@h@PHb@pAl@l@TNZ`@j@h@Nh@BBNFLAPBDDHCRBHRMTEf@EBI@?B?HDBBFAJILAFi@n@Mb@y@vAGRSVSPCH@Ht@h@FTKd@KVW^Q^IHGRHRG?ZTJPD@@?TPDGF?JLTDf@p@VNXVFBV\\DNHFOn@BHHFNf@@VK`@@d@oAQC@ABLJDL?R`@ZFRC?@PDDRPHPV\\FDNDRPFD?^EPAV?CCD",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    39.98878522776067,
+    116.4749097917229
+  ],
+  "end_latlng": [
+    39.98777713626623,
+    116.47507885470986
+  ],
+  "average_speed": 2.574,
+  "max_speed": 10.746,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 47.7,
+  "elev_low": 36.7,
+  "upload_id": 11988191171,
+  "upload_id_str": "11988191171",
+  "external_id": "48183a5a-4470-41cc-8d00-aa04424d37e2-activity.fit",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

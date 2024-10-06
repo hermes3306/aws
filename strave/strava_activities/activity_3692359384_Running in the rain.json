@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "Running in the rain",
+  "distance": 10000.9,
+  "moving_time": 4066,
+  "elapsed_time": 4382,
+  "total_elevation_gain": 17.5,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": 0,
+  "id": 3692359384,
+  "start_date": "2020-06-30T10:56:38Z",
+  "start_date_local": "2020-06-30T19:56:38Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 1,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a3692359384",
+    "summary_polyline": "i`|cFgk~fWw@?iBPkCFCFG@_AIi@?i@J_@Bm@Ay@L[ASDU?eAFUFc@RQ@}DFqAHqDNo@P]DaAVuAh@}@d@g@LQLe@RwAXMHa@JSHg@\\o@\\QF_@DiAf@QN[F_@Lg@X}@VYVe@L{@\\o@b@W`@}@zBg@n@CJEf@MbANBTNFP?TCBu@HUDUPYlAYt@[pAOZSn@MRYPg@h@m@ZcAXm@Jg@?qCZ[Fs@XYF[V_A\\o@d@YJYRcAr@uB~@QLWJQP]NWDMEeB_AYKGBa@Xi@ZONe@`Be@rAI`@Uj@g@`Bm@zAMd@a@nAUfAEz@@tAO~AGfF@\\TpBH`@~@nG\\nBHbA@~@@Pf@bAp@`AJ\\QjBAb@]~AKx@ARDdAAlA?zHA^Bl@A|@@vECpABjCCr@CzC?jBF~A?fACFBjACp@DLJBAAEFGV@xMBIA@B@AIABF|@KLERHN?IE?Fa@@[CWAAC@AI@kDEeBFyC?aAAs@BoBGkBB{BAq@@k@Ak@EWDkAAy@DaAAsCBm@CoA@oDCi@B{BCW?qDDeBBa@R_BLg@F_ALu@JY?GKSQK_@c@m@sAOc@CoACUq@iEKgAe@qCYkCAm@D}B?o@DcAJgA@UE{@F[@g@j@sBVq@Ng@^_A`@wAf@sAH_@Ra@Vs@F]Pa@DCj@Ap@I^c@D?DGB]DI\\S^Mj@GlAEx@MVG\\Q`@YlAcAj@[b@OPCFBTp@D@JAh@WNCj@SrDk@x@IZKDGp@Qd@WhAmA`@m@Ni@Pc@dA_DF_@Ts@Hg@T_@Ns@FWX_@Xq@XmAFO`@S`BeAf@Od@[`Bg@RSXMr@Wn@Qv@_@t@W\\WVMTI`@Gn@W^ENGZUn@W|Ae@\\Op@STKr@Kf@MtCMXG^@l@C|AOv@JQECGBS`Bn@n@]dB[F?NBx@ItAEn@OxAGJCFEfBFj@?`AKjAG\\A",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.501657,
+    127.137028
+  ],
+  "end_latlng": [
+    37.501557,
+    127.137177
+  ],
+  "average_speed": 2.46,
+  "max_speed": 11.3,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 29.0,
+  "elev_low": 18.9,
+  "upload_id": 3942849891,
+  "upload_id_str": "3942849891",
+  "external_id": "a39ffd13-8e81-4b34-bf1c-0a75be7532c9-activity.fit",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

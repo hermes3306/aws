@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "Saturday Afternoon Activity",
+  "distance": 12353.7,
+  "moving_time": 5242,
+  "elapsed_time": 5347,
+  "total_elevation_gain": 0.0,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": null,
+  "id": 12217684308,
+  "start_date": "2021-06-05T08:04:13Z",
+  "start_date_local": "2021-06-05T17:04:13Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 0,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a12217684308",
+    "summary_polyline": "iu}cFktxfWs@\\QTI\\Cl@BZz@tB`D|Fd@hBl@~CZv@V`@TNdAPj@Oz@u@NENNL`Aj@ZZd@QRc@Rm@r@I`@Az@l@lDr@pCf@zA|@nBf@|A\\d@ZX|@ZjARtCBp@mANo@Dk@C{A]aCg@eBg@yBu@yBKMkA}BIWm@aAWUq@Y_@@aBn@IIUk@QKm@DNy@A[BOv@g@R]H_@Ew@c@qA{AyBk@iAuAyBa@YWc@cBgBwA}@s@EyANq@n@Ot@A^H\\Xr@|BlENLn@jATr@v@nEp@zA\\\\pANx@Wx@w@FCDFNr@T\\Hp@EBPN?HcAz@KVIt@PlBx@pDBf@d@`A`CbGv@`AdAh@`DJ\\Er@[Tc@Ny@@}AE}@o@aEu@gCgBsEoBaD[S_@Gk@@kAl@SYs@a@EUO?BeAb@c@d@]Ho@?i@Ke@Uc@SQa@iA}@mAKe@e@u@BMGK[QO_@o@w@w@o@c@i@g@WUYo@a@y@CmAJo@\\Yj@BfAb@zAtD|GF`@v@rCl@vCh@f@nANh@MbAu@LANZ^XDPt@lALj@k@{@BDELiAlAOb@BlAVxANhAdAbDP`Ab@~@Rr@\\f@Z|@lAfAxA\\fC@v@UXa@H]HeA@cBOuAaA_EKOg@oBa@gAe@iAgB}Cg@a@aAOUHkAr@OYQo@MAFKEE?QIUSOAKDKz@u@Py@Eu@q@mAK_@s@oAwCsEq@y@aB{AEMYQ_Ac@aB?UB[Pe@j@Cd@JbAHb@\\x@~@jBdBtCZdAf@`CXlBRj@^`@`@Jl@@\\EdAs@ZMRJ`@j@Hj@LT@TcAfA[`ABd@\\tCb@lB~@|C|BdF`@d@dAf@fCJzAIp@mAFm@BwBKmAwAcG{@}Bs@_Bs@qAs@sAe@Ue@Ik@Hw@d@M@OKO[{Ao@AKPy@LJBIv@g@Vc@He@AUUeAo@mAUs@oAiBKY{AqByA}AWMm@w@cAe@GMeBBa@JYT[p@Av@VjA`AvBZ`@vA`Cp@zBx@dE^t@Zb@`APz@OhAy@HHHV\\TF`@XVCDBH{ApER~AdArEr@zBf@fAb@p@Vp@~@jAx@ZrA?dAN~@GXmB^iEKk@{@cDIi@oBkF_AaBuBkB",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.51268976,
+    127.10742102
+  ],
+  "end_latlng": [
+    37.50895891,
+    127.10290615
+  ],
+  "average_speed": 2.357,
+  "max_speed": 19.156,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 17.5,
+  "elev_low": 16.0,
+  "upload_id": 13025156405,
+  "upload_id_str": "13025156405",
+  "external_id": "last_run.gpx",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

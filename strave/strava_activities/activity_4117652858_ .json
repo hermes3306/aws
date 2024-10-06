@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "오후 라이딩",
+  "distance": 10398.6,
+  "moving_time": 4052,
+  "elapsed_time": 4052,
+  "total_elevation_gain": 7.0,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": 0,
+  "id": 4117652858,
+  "start_date": "2020-09-27T07:04:20Z",
+  "start_date_local": "2020-09-27T16:04:20Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 4,
+  "kudos_count": 1,
+  "comment_count": 0,
+  "athlete_count": 2,
+  "photo_count": 0,
+  "map": {
+    "id": "a4117652858",
+    "summary_polyline": "ce_dFsdvfW?hABPZr@Rx@r@fBvAlFBT@PADUJCHp@fDb@~CT~BLvBLfALlC^pEVrEDd@DbAJdA?bAFhAHlHE~EGvABv@Gb@IpCIt@IrBu@xHMdBO|@[xDW|BOzBUnCq@hGMjBb@zBBh@Gb@?zAF\\T|@NXXRLPPPNDLL^Tp@VJJBJ@JUhDOdFKPCz@CZw@~AQXc@LMGc@d@cAj@a@^w@j@u@b@_Ar@QPa@j@M\\y@zAWTYHaAh@g@`@e@l@U^]r@]j@Sd@cAlCiAhCm@zAq@~A_@lAYr@I\\c@|@g@tAuBpDKVc@j@uAzACH[Vw@~@OJs@bAmApAiBzBq@jAWj@i@rAe@bBQz@U|AwAbJg@xDg@fDGf@SfAkAhI]rBaApE}AbH_@pASfArAkGvAcG^oBz@aFHq@l@sDv@sFf@{CJmAv@mEr@qFXcAdAaDt@{AhAcBf@a@\\c@v@u@\\_@nAcB~AcBdBiCjBqDr@_BzD}Jf@gA|@eCj@mANc@d@eANWlA{A|@k@NEv@g@lA}Bt@y@lEeDZKj@_@|Aq@DKNi@Tc@V_@Ji@Bc@FO@KJ{BDeFAk@MMUOy@YWQUWU]]w@QcAEeA@g@H_Ai@sBEa@TyCVgCJs@TsCr@eHLeANgCPoALuAHo@f@mGN}BHaCHiACm@DgA?eB@s@A_@BeAE_EKuD?g@MsAEwAOwAS_EUkC_@kGKaAGkAQq@MuA_AyF@MFENC@Ic@mBiA{DAM",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.520349,
+    127.094663
+  ],
+  "end_latlng": [
+    37.519888,
+    127.093325
+  ],
+  "average_speed": 2.566,
+  "max_speed": 8.1,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 18.9,
+  "elev_low": 14.1,
+  "upload_id": 4406000041,
+  "upload_id_str": "4406000041",
+  "external_id": "6668c348-ce4f-40ec-8e06-c547401adeb4-activity.fit",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 1,
+  "has_kudoed": false
+}

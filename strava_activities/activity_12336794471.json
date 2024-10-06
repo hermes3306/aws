@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "Friday Morning Activity",
+  "distance": 6488.9,
+  "moving_time": 2283,
+  "elapsed_time": 2387,
+  "total_elevation_gain": 22.6,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": null,
+  "id": 12336794471,
+  "start_date": "2024-09-05T22:24:08Z",
+  "start_date_local": "2024-09-06T07:24:08Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 0,
+  "comment_count": 0,
+  "athlete_count": 2,
+  "photo_count": 0,
+  "map": {
+    "id": "a12336794471",
+    "summary_polyline": "}lhdF{hofW?KGOKM?EIU@MPeATOh@EVDDM]OUsARSNGFQJMLG?UUSLMEa@@e@\\c@Rg@rBqBX?h@f@PAFa@POTy@PYFWl@{@HW\\s@^a@H]Hk@l@gANSFS\\i@BSN[d@e@La@T[RFRNNDWwAVw@NSHUPWHa@HWh@gA^k@`AyB^o@REL_ANs@t@aADYTQPy@NSHYV_@ZgABAE@PFLX\\K\\DRNHKG[BWVQN[XiAMQYOm@SPN^f@RLt@LRTN\\ZVd@j@j@d@LTRTf@d@PH\\l@XNv@fAl@n@JRxA|Af@\\b@j@vAxA\\ZVH`@`@TPPRTJ`@X@CTRd@XhA~@tAf@Bv@TR?Dj@`@h@f@zAhAf@Zh@f@VLZ\\v@l@b@RpA~@hBfBNRPN\\d@f@~@JZZr@Tt@Hb@JXFX?VJZFpADtACb@@\\G|@ETA\\mAfHGf@Mn@u@~EECAx@UXKXI^GbADZMd@KfA]~AUn@ORw@dCe@zBBAc@z@YXq@KSWSESAg@Oi@CAAq@?WBmAMoEPSNUn@CZH^Yl@@^Cz@IV]Gs@Yy@KuAEUHOGi@RU@m@RWAg@Rs@^Y?OXSRQJo@PCHQRa@@k@Lg@TQ?k@VQL[DUR[Nm@NSHQJU@e@ZiAd@W@c@d@S?OXUEQJ[@c@^UBWE]S[FOL_@b@i@Ne@XEJ_AJ]TYZ]J]RSRc@CiAt@c@^SJk@FaAZi@Ju@\\g@\\W?QLk@Tm@NSBW\\OJOAm@n@]EQFY\\a@ZYFYNiAv@c@b@eAbBUp@Q^LeAh@[P_@Z[d@u@z@o@h@Wl@U",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.5676782,
+    127.0595088
+  ],
+  "end_latlng": [
+    37.5688453,
+    127.0460207
+  ],
+  "average_speed": 2.842,
+  "max_speed": 5.836,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 26.8,
+  "elev_low": 15.3,
+  "upload_id": 13152691588,
+  "upload_id_str": "13152691588",
+  "external_id": "last_run.gpx",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

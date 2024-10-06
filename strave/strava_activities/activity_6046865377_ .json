@@ -1,0 +1,63 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "저녁 걷기",
+  "distance": 353.2,
+  "moving_time": 332,
+  "elapsed_time": 496,
+  "total_elevation_gain": 0.0,
+  "type": "Walk",
+  "sport_type": "Walk",
+  "id": 6046865377,
+  "start_date": "2021-10-01T11:23:33Z",
+  "start_date_local": "2021-10-01T20:23:33Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 1,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a6046865377",
+    "summary_polyline": "i}zcFyl}fWDJVTHZJ@NCPMLSF_@GSS[G?OUMECGK@GAKL@TANKZ",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.499214,
+    127.131497
+  ],
+  "end_latlng": [
+    37.499189,
+    127.131432
+  ],
+  "average_speed": 1.064,
+  "max_speed": 2.0,
+  "has_heartrate": true,
+  "average_heartrate": 96.0,
+  "max_heartrate": 96.0,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": true,
+  "elev_high": 45.3,
+  "elev_low": 43.4,
+  "upload_id": 6426487465,
+  "upload_id_str": "6426487465",
+  "external_id": "FCE5CA82-493D-4479-B42E-C68CF0AE2AD1",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "\uc810\uc2ec \ub2ec\ub9ac\uae30",
+  "distance": 11701.2,
+  "moving_time": 4988,
+  "elapsed_time": 5045,
+  "total_elevation_gain": 22.6,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": 0,
+  "id": 7589768998,
+  "start_date": "2022-08-06T02:14:08Z",
+  "start_date_local": "2022-08-06T11:14:08Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 1,
+  "comment_count": 0,
+  "athlete_count": 2,
+  "photo_count": 0,
+  "map": {
+    "id": "a7589768998",
+    "summary_polyline": "_lcdFgnzfWEKFKGMH[JiAi@wAaAcAaCcB}@IqAw@{@G_@WwB[qAy@c@e@uAQwAs@y@GoB_@{FkBeAMq@]}@My@_@}AYs@YmCg@kEwAmDu@sC_AkCsA}B_Be@i@qJkDQDCIPFeAm@uFiCwE_D{@y@{@g@cAcAkBq@iB[aAm@U]UeAc@o@O]U}@i@o@yDgAcA_BKa@_AeBm@u@So@OOGc@S]Ce@SWWgAmAmCKm@c@uAq@_BAs@H]y@aAID?d@VZV|@^`@RjAn@nBFp@Zl@Jl@l@dAF`@TR@\\`AnC|@nAhAxBr@`AZNpDn@Vd@Fj@PZ^zAn@jAjA|@f@N\\fApATPT\\|@b@Rj@j@Zr@v@z@l@HRPp@BHTvAp@f@b@hC`@XTv@ThA~@v@|A`@`@~@h@j@Lj@OpAv@p@?f@f@hBB~AOfBbAX@jBx@NA^XhBXdC`A`A?xAf@`@?nAn@f@`@zADp@^fB^n@Dt@b@|B^t@`@nAB\\Vt@DrBt@JTnARfBzAdD|@`@In@l@l@Nf@Zv@D?Jf@Pd@n@b@Xn@N~@bBB|@CRONBh@[vATl@dAl@d@n@x@f@j@NpApArAj@t@~@r@l@VDf@b@xAb@rCdAhAfBp@b@JXd@`@Z~@lAx@p@hApAnAr@vAz@h@HVl@j@v@\\lA\\v@n@~ATb@^`Dx@h@b@PAd@VdBF`Bn@d@Iz@Tz@t@tAZ@PFHTJ^l@t@b@Hp@Xf@r@Vh@v@XLl@f@FXj@d@VXJR`Al@F\\NRh@XRf@d@Vr@~@z@j@VFTKn@h@j@TJZn@p@G^Z|Aj@`@Z^TEXt@xBjB@\\~@?h@f@XpA^h@ZBGHNz@j@x@HlA`@lAb@n@V|Ad@vALLBp@R@Db@p@h@Tj@THR\\BXTXJtBb@bAd@pBl@lAAf@RjAOj@g@f@I@GOrAiDc@WK]@Y]_Bg@m@Ke@A}@Kk@k@cAe@yAa@u@kA}AIy@w@mASiAUg@?UQ_AUQC_@Ua@Ga@Yo@a@g@?YU[G]IK]IiAiAu@MUWQm@e@KO]Zs@",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.541927,
+    127.116684
+  ],
+  "end_latlng": [
+    37.524673,
+    127.10273
+  ],
+  "average_speed": 2.346,
+  "max_speed": 14.493,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 20.3,
+  "elev_low": 14.2,
+  "upload_id": 8095504527,
+  "upload_id_str": "8095504527",
+  "external_id": "shealth19607830-b90f-8a70-28dc-80a03747448c.tcx",
+  "from_accepted_tag": true,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "Morning Run",
+  "distance": 9676.6,
+  "moving_time": 4809,
+  "elapsed_time": 5181,
+  "total_elevation_gain": 35.8,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": null,
+  "id": 9636804939,
+  "start_date": "2023-08-06T01:22:18Z",
+  "start_date_local": "2023-08-06T10:22:18Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 0,
+  "comment_count": 0,
+  "athlete_count": 2,
+  "photo_count": 0,
+  "map": {
+    "id": "a9636804939",
+    "summary_polyline": "kffdFuy{fWq@Kc@_@[gA_@e@mCeBg@MyAUOOo@MKQw@_@WA]WW?_@g@q@IC[k@[q@mA{@}@@M]i@u@_@k@Mo@u@aA_@Q]a@UKa@Wa@EWBQ]i@?Wc@gAo@Wa@UsAMw@]IMCYSQaAaBu@yAMk@k@{@Oc@?SiAeC]_AQu@_@k@Ea@QKUk@Gy@Qq@Wa@Aa@WU?QWY@c@W{@[g@Cu@Qc@F`@RHZn@CNH^?h@d@`APv@XX^lBLT@TJZDx@T^Jb@PTLz@^l@?Nn@rARx@`@z@\\\\Nb@^r@^d@rA~BVNrDh@PTPtA`@p@h@zA|@|@|@`@Zx@\\D`Af@^p@x@r@F^d@x@Pb@z@XzAZr@n@tBlAx@Hd@Rl@B`Bx@j@d@@PPTFTPb@`@NDL^TtBPPFZh@tA@NTXPz@Bj@Qz@R|@EHDDPt@q@b@g@?SWw@EfBFb@EYYQaA]mAQuDcB[?qDoA?ILEd@d@\\?p@ZREl@HFHLCj@VZGFIAKJIg@]AIDIEA@GISBF?MBHEBCIDSIe@JWMGEJL_@RBFK@g@HUGu@F_@Eu@H_@Iq@HeA?m@KOBQYYSy@_@YGe@MGOa@UuAEAJKO]Ca@u@}@[ASH{@UMSOBi@Uc@BK_@[KCMe@HcAu@{AQWSS@[MQ@OO_@AqAg@k@c@uA[YSEOe@EIWc@KWc@m@Q_@e@QCWc@QA_@g@eAQs@]u@Ea@So@CUHWKGFo@MUDm@STLNG\\PzBLhA?`AVJNX?dBx@nAjAbAp@t@\\TZx@`@t@j@\\L|@Np@\\fALl@XnA`@f@HLNfBZJNNAXPzARhA\\h@BHPb@Hv@?f@`@fAZRVDb@O|@FvACLNvAKF?v@^b@H?DTb@h@Hn@h@z@Rx@JrADCDNEnANb@H?Xb@VDFKF@THPTz@OPXb@BHPTGCDHHFELRf@PTMZf@b@WEDb@NZVb@Hh@^^G`@Fn@X?GN@NKJDCLVLRA\\h@n@_@HH?NNNZAJJ@GJVEBRY^^b@FNPx@E|@h@t@ILXRDBNF@CSZCL^\\SESH_@j@i@FKDg@?[d@}@PEJS@ULK",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.55484,
+    127.123085
+  ],
+  "end_latlng": [
+    37.54637,
+    127.12631
+  ],
+  "average_speed": 2.012,
+  "max_speed": 6.78,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 28.9,
+  "elev_low": 14.4,
+  "upload_id": 10332593567,
+  "upload_id_str": "10332593567",
+  "external_id": "shealth43568c39-3d62-4222-5105-2538be2a7047.tcx",
+  "from_accepted_tag": true,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

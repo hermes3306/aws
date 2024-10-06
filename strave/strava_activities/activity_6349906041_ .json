@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "오후 달리기",
+  "distance": 20036.4,
+  "moving_time": 8464,
+  "elapsed_time": 8707,
+  "total_elevation_gain": 42.8,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": 0,
+  "id": 6349906041,
+  "start_date": "2021-12-06T07:59:04Z",
+  "start_date_local": "2021-12-06T16:59:04Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 2,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a6349906041",
+    "summary_polyline": "ek|cFmj~fWwDf@_DCkAb@o@FaC@kDRcAAgAHyB`@yGvCq@J{Al@_Ar@uEnBwDpAy@Re@Xa@h@u@zBe@t@a@~AaAdC?LsAtEiA~AiAr@y@VeCNWL_D^aAr@w@TgD`CyB`AcA`AWAs@e@}Ao@WDs@h@Y`@kAlCQdAqAjD}AhF?f@IZB`AQvBEdEFhBpBnLNtDPd@rAxBCv@WjAF~@C\\a@fD?rCBfAGfBLzCKjDBtCGzAFfBKvDF`AC~AF`DIlEHhDKtCNtCx@jBFf@c@tBwA~CT^f@RlBrAnAh@bDdIh@xCTb@Ff@d@nAd@p@Zt@xBrDl@tDTx@hBjEBVE`@tA~Ch@`BrA~FQhAb@xBx@zFv@hM^lEFzB\\tEHdEFlHObKe@pGKdC}AvOKf@Ad@i@zEKpBi@dEWpCG~Bo@tF]jBY`EFp@\\T^F~CGjAQp@@LV@~@IvB{@tDg@dAUTmBj@iBrA_EjDm@nAa@p@k@h@_Ah@_AdA_@r@s@r@sFzMq@~B}@tB]h@g@vAiAzAgBjDSFiAfAoCnDu@t@f@y@pBmBzA_CtBcCpAgCpAmC\\kAvAmDpAuCn@mBx@cB`AeCbBuCp@i@|BoAh@gALu@Xk@Hy@d@uAjAiCx@uAfBiAvEa@HYAeBLoAOwBHkAEWYO{@Qo@a@e@s@_@eASsABuCc@mC@m@Z}CLmCd@wCTkEX_DIcB@]Hi@Pc@VoATyAVmC\\sGFoC@yDI_BHiACwB?wEk@yKQeBgAuP[eBQsBc@cCU_Ac@o@WgB?}AsAcDYwAi@_BQsBu@mB{@{EcAyAwAyCc@w@]cAQy@OUaAcE}A_Eq@eAeAm@s@s@{@a@u@eA?Q^_@XgAZg@T_BQw@g@iAJ_@Iy@DoBIqAD}@EkAFwGMcAByBHq@MeCBwBGkAJaDGuDDoDMcAC{BIy@ZsF\\uALeA?}@LuA{AaCI_@KoBiBaLQaBIeCDiCTuC?cAPmBrA_E`@iBl@yAz@cCXaAPKxA@z@s@l@w@RI|CSt@Qr@a@fB_Bt@[VCNHPj@f@OrAiAt@[x@OnA?b@YhAUz@qAj@E^q@b@e@pB}FNI?Yf@aBx@wAl@cBt@y@lBu@h@EpAs@hA_@vAw@~@{@fA[dAk@jBStAq@vEwAjAOdEIxBSTHrC_@PMZ@~@Q~@JjACxB_@dDD|Da@nBG",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.503377,
+    127.136834
+  ],
+  "end_latlng": [
+    37.501116,
+    127.138167
+  ],
+  "average_speed": 2.367,
+  "max_speed": 5.93,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 28.5,
+  "elev_low": 12.2,
+  "upload_id": 6749433592,
+  "upload_id_str": "6749433592",
+  "external_id": "01BD032A-4E52-45D2-B6B4-1DAA8EC28A69",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

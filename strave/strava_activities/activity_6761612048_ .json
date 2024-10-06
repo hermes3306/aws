@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "오전 달리기",
+  "distance": 5207.2,
+  "moving_time": 2343,
+  "elapsed_time": 2349,
+  "total_elevation_gain": 16.5,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": 0,
+  "id": 6761612048,
+  "start_date": "2022-02-27T01:14:45Z",
+  "start_date_local": "2022-02-27T10:14:45Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 1,
+  "comment_count": 0,
+  "athlete_count": 2,
+  "photo_count": 0,
+  "map": {
+    "id": "a6761612048",
+    "summary_polyline": "gxedFaw{fWBNHHh@VTD^TtBn@HFZDXN\\Fj@N\\DVLXBRHRD`@Pz@Ph@VbEx@t@Td@FdA\\`@P^D\\J\\Ft@XhA^VBPJ`@F^NhCh@tAb@XDn@THHXNRB`@BTH\\Zj@^VTXPHBl@Cd@Df@ZTDV@ZRZJP@~@X^RLLtAz@j@b@NRVR^r@NNJTBN?VGXGn@UbBANHPt@\\PTRLZb@xAbAf@Vp@j@j@`@`@Pl@n@d@XNNTH|@r@XJv@Nl@ZJ@`@JZTJDd@f@p@bAHD^d@t@n@^x@V\\`@XlA|APNd@n@hAjALRv@|@rA|@\\Lt@f@l@ZfBf@pAh@RBtBh@PHFHd@HPJ~@NP@ZCTBl@RTDFDRFnBbAPDXRZ\\XPRVj@TVZZRp@r@j@z@NLh@l@t@|@jApAj@f@l@x@jAbANTp@j@f@n@HFPDdAP^HZPb@\\h@|@HT@ZHVFh@JRHLPNR\\PLRIHM`@s@DIBWb@e@BMAMLy@Cc@CWIMW}@Eq@Ii@Cm@Di@CqADuBAmADuCCe@CwA@g@AKBaAE[Du@CaA@a@IyA@gACc@BcADe@CoA@[AUBu@AqALyBKgAEEGYEWDe@EkA@]CY@YJ}@Dy@FQ@MEoA@SXaACeA",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.554129,
+    127.123219
+  ],
+  "end_latlng": [
+    37.524438,
+    127.116577
+  ],
+  "average_speed": 2.222,
+  "max_speed": 3.059,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 28.2,
+  "elev_low": 14.2,
+  "upload_id": 7192069711,
+  "upload_id_str": "7192069711",
+  "external_id": "220FE293-57BC-4361-9313-3F5D5659A50D",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

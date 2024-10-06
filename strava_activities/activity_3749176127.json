@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "Half marathon",
+  "distance": 21321.2,
+  "moving_time": 8903,
+  "elapsed_time": 9243,
+  "total_elevation_gain": 44.3,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": 0,
+  "id": 3749176127,
+  "start_date": "2020-07-12T04:57:05Z",
+  "start_date_local": "2020-07-12T13:57:05Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 1,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a3749176127",
+    "summary_polyline": "k`|cFmj~fWi@K_A?aAJaAEoAPsAI_ANw@C{EZ_DbAq@K?KICq@AgFVsARcCv@cBx@u@h@aC\\uE~BmJjDm@b@]d@u@rBi@z@Iz@qAbDKv@}@`D}@pACTYXqAr@kGp@cDfAiAh@gChB}@d@}Aj@WT_@Nw@EmBcAs@\\o@j@u@hCaAhC[nASZ{AtEO~@DhBQfCCxFf@bEnAxHLtCfBhDKbAFdA]~@MvAITBra@IjEHfFCzRHpAt@bCYdB_BnCCTJVpAr@|CxBf@bAtBjFp@xCbAzC|BnEhAtB^dCTj@F@?IBFRrA^bAHx@n@jAR~@~@jCz@hDf@|ANx@?L[NAHVz@@\\?ILl@JBFdAf@nDvBhZZtJ@jHGjEBz@KhBMjAIfCgCfXD^f@^HZq@FaEn@~F{@y@BQMUV?`BeAbKGdAd@|CIlAPrBd@hAT\\r@p@dA`@RVBl@@EBFE|A@tBYlEwA~CmDfBo@l@kC`By@|@eA|BcD|Bw@bA}AvCaAxCeA|ByDvJcCdFgDbFqB~By@p@mC|CyBhEy@bCs@|E[vA\\gB`@qCdAuD~@_CZW|@wA~@aAtAmBn@e@rEuF|@{AjAuBjEgL|A}DhAmCxAuClBwBrBkAz@wBZg@`Bw@zBoBlBeAlAi@|@_Cd@cEF}ABcCGmA{B{@q@u@g@mAMm@EmAJ}Ae@eCd@gGd@aENcCXSXZL@Ik@_@_A?w@ZyC?k@`@oCh@uFh@iI?iAJaAEcAHcC?gEMeJu@iLKmCNLPKa@WQe@AqAKs@_@kG}@gHY}@Gs@BMVK?IoAqENq@?YJOEAM\\@GK?MWUM_AmCk@iAKo@a@WKk@?y@]q@[mAWiBWaAk@eAk@o@cAqC[]gAoCkAyEoBaFQ[[YSKY?a@i@}@o@Yk@k@c@?Ov@uAHg@`@g@?e@Le@E_@q@aBMmBF{AIeBD{A@}IMaCHiBCcB@_CFcBKaSHcId@mDKwBFWCQm@aAa@cAG}B_A_Gw@iGEcDVaFE{AHq@xAqExAiFnAsDvAUn@s@Xi@j@YdEWtAu@f@i@jCkAnDkAlFm@~A{@`AsAZqAfAgDt@uAL?RVHG@]J}@r@aAz@cCn@k@jE{A|AgApF}BdBe@l@@hDkB`Cs@~AWzH_@`Eu@dCVfCQvAYxDBnBU",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.50164,
+    127.137039
+  ],
+  "end_latlng": [
+    37.502179,
+    127.136779
+  ],
+  "average_speed": 2.395,
+  "max_speed": 15.7,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 29.0,
+  "elev_low": 14.1,
+  "upload_id": 4005157161,
+  "upload_id_str": "4005157161",
+  "external_id": "f85f9596-f90c-485c-890f-78dbac45c270-activity.fit",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

@@ -1,0 +1,63 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "Morning Hike",
+  "distance": 7699.2,
+  "moving_time": 4829,
+  "elapsed_time": 4940,
+  "total_elevation_gain": 187.4,
+  "type": "Hike",
+  "sport_type": "Hike",
+  "id": 9830789633,
+  "start_date": "2023-09-11T20:57:17Z",
+  "start_date_local": "2023-09-12T05:57:17Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 1,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a9830789633",
+    "summary_polyline": "o{hdFynofWA\\CDSMU[N_@A_@DG@KCEIDIA[IWSQGU?OXAREV@d@ADEDECI_@O_@c@I[M]GS?YDSQICOKCAM@Mi@a@s@C?WRWHkBPOJ?@BISWCMD[CWIMm@m@A[OKIUIGKCa@CS@KKMEKKS_@?IFE@IKCGECBGPC?GMWSC_@EEU?i@JG?ECS@IDCHB^PDV?NDPR?J[fAEX@NPd@FZMFKNGDyBHa@MOYGYKkAK][g@WOg@c@q@OKIUGc@FG?SSWe@e@i@GGo@YM?i@J[@ELDn@Ah@EFQFOPS@CBO?IIEMKAWKCEE[Mm@k@gACCYEOMa@IWBa@CKDM@UJcBEKBUEFMOBa@PDAFI}@?a@ISK[@a@Ag@BmANs@Y]UKOs@_@S?UFS?UE[HQ@]Os@R]Y]?KEACMAOIc@IWW}@a@OOOEIQc@[UKGIYi@k@a@OE[?a@IUGYS]@GAQBy@MGGKYYQ][GA[]OGSc@e@s@WUEKEEe@_@MEWCOBQJHLW@CDHb@LDP?LEPMNSNI\\PLLR\\Tl@R\\`@ZXVv@f@f@XLDR@TDr@\\^Lf@RTRHCXZVNl@f@`@TTXp@^NLXLVd@?JFACQSK?BHHXBBBXBPNV@HBX@b@CZBZHz@EDCF?r@?ZPZF^PN@h@LbAF`@F`@@JBT?ZJ\\CP@PD^\\XCFQDAJ?PDTLJ?F@BAPAXGVMD?LONGH@ZIPHR?d@DZZNH^J]ZCT[FU@OJ?JDJJHPBX?FGACY?EFDFJH\\H?AMDED?FX\\VDf@?VFNCNQP[VODO?i@DQNIdAS`@UTJz@p@l@^R@THJC`@_@HED?JFTVT^JZBPDj@Jf@?^GX@FPPVDL?DD`@JFDPF^?x@JF?NIGW?OK_@L{AEg@a@i@_@]TLb@Cd@FNDBDB\\ZVVHN\\BBHBn@ATMDPBTDF\\TVZPN`@LBTKZFr@DPJDJ?JKXGj@@BCT?RB^SLMLCFHBTCj@HD\\?PHT@\\P|@BJBFJPJNVRJTI@ICU?IHMXQJAJBZJH@TCP@Wx@HbBDDN]h@QJUHAHGFOHe@LOHQZ@",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.568596,
+    127.06083
+  ],
+  "end_latlng": [
+    37.56757,
+    127.05891
+  ],
+  "average_speed": 1.594,
+  "max_speed": 5.815,
+  "has_heartrate": true,
+  "average_heartrate": 124.3,
+  "max_heartrate": 174.0,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": true,
+  "elev_high": 107.0,
+  "elev_low": 20.0,
+  "upload_id": 10538142587,
+  "upload_id_str": "10538142587",
+  "external_id": "shealth276cd16e-c37c-44aa-a3a7-2e11105f9db1.tcx",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

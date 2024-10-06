@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+  version="1.1"
+  creator="Runkeeper - http://www.runkeeper.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"
+  xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1">
+<trk>
+  <name><![CDATA[Running 12/28/15 7:33 am]]></name>
+  <time>2015-12-28T00:33:23Z</time>
+<trkseg>
+<trkpt lat="20.960601000" lon="107.060943000"><ele>22.8</ele><time>2015-12-28T00:33:23Z</time></trkpt>
+<trkpt lat="20.960557000" lon="107.060866000"><ele>22.8</ele><time>2015-12-28T01:32:32Z</time></trkpt>
+<trkpt lat="20.960472000" lon="107.060870000"><ele>22.8</ele><time>2015-12-28T01:32:45Z</time></trkpt>
+<trkpt lat="20.960386000" lon="107.060899000"><ele>22.8</ele><time>2015-12-28T01:32:55Z</time></trkpt>
+</trkseg>
+</trk>
+</gpx>

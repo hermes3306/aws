@@ -1,0 +1,63 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "오후 하이킹",
+  "distance": 8481.8,
+  "moving_time": 5600,
+  "elapsed_time": 9826,
+  "total_elevation_gain": 370.9,
+  "type": "Hike",
+  "sport_type": "Hike",
+  "id": 7673325256,
+  "start_date": "2022-08-21T04:59:53Z",
+  "start_date_local": "2022-08-21T13:59:53Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 19,
+  "kudos_count": 2,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a7673325256",
+    "summary_polyline": "yiidFmaufWNIB@FCHKBBBEJADCGDDELCTBTHZVN@@CGMAIA_@Bg@IQDUHGBKAS@ICQDK@M?OIU?GPGv@@LALGRWPg@?QIIUGIDO?SM[EF?FQBWDIBKJOJSBOTg@`@_@H]R]HQDOROHKLe@@o@C{@M}@@YF]?QIk@Qm@GIQMSCs@BIAYUBDCHEDS@DJ?KEMOQa@Y]GmAHk@@?G^g@RMPEFI?QEOGIRN\\BHYf@Gr@WP[@a@BAFYES_@y@m@y@e@qAY_@EKAQa@sAKOQMCG?OGOk@q@MW_@]\\cA?SIOICH@FG@ICKMGUm@c@s@G[M[]e@UQKQI[AMaAMI@k@Ei@FO]OKeAYg@KUKM@Q`@MDa@BW?UCo@Yc@]c@?OCOIMMCQG@u@SKSYS_@IOGY?k@OU@GE@KAG[I[[]MKAQ]i@k@YOIIo@[LtB?PGFDn@EbAm@jBIPMTo@f@IPDl@ANE|@CHAj@CB?VIXGdASh@El@Mh@O^IH@LENKVOf@SXDF?CA@IMHjAI?ILADW?PnAGr@@hABJVPJ\\JN`@RPRHj@?p@ER[n@Md@e@p@Kf@[b@CPEh@QfAKXKLE|@KX]t@AJFjA?pBCl@Bj@Cr@F|AIvACr@Mn@ATKXMRUrA?FNFjADBC`@@\\THPGXC`AKr@NbB?z@I^e@@SOIWFwAC~BM`DbMliBhCvm@~y@lZ?FA@y@Fe@?OGW?AJHb@HPf@p@\\r@iA{EBh@NFZFb@@PB`A?p@k@HELAFEn@y@FQ?QMm@Oe@",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.572296,
+    127.089035
+  ],
+  "end_latlng": [
+    37.5678,
+    127.0581
+  ],
+  "average_speed": 1.515,
+  "max_speed": 10.524,
+  "has_heartrate": true,
+  "average_heartrate": 123.3,
+  "max_heartrate": 161.0,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": true,
+  "elev_high": 344.8,
+  "elev_low": 15.1,
+  "upload_id": 8188848778,
+  "upload_id_str": "8188848778",
+  "external_id": "shealth8219a3d4-d885-4ca8-92d8-f33144d4309e.tcx",
+  "from_accepted_tag": false,
+  "pr_count": 8,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

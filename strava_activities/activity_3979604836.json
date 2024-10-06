@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "\uc624\uc804 \ub2ec\ub9ac\uae30",
+  "distance": 18767.4,
+  "moving_time": 8599,
+  "elapsed_time": 8790,
+  "total_elevation_gain": 20.7,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": 0,
+  "id": 3979604836,
+  "start_date": "2020-08-28T22:12:56Z",
+  "start_date_local": "2020-08-29T07:12:56Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 2,
+  "kudos_count": 3,
+  "comment_count": 0,
+  "athlete_count": 2,
+  "photo_count": 0,
+  "map": {
+    "id": "a3979604836",
+    "summary_polyline": "_y_dF}mwfW@HLFVn@lB~Ef@hCXt@Jd@n@vA|@fBxAjC\\r@n@xDdAhCNtAj@lA~@xCp@dBPv@Tl@\\zARfAYNCPZrAh@~CZfCTdCHbBv@hKBpAZfEPdFBP?VFfB?`EEdBB^EF@bACj@@`Ak@vKcAvJuA|NWfDu@lH?Xb@hCCjA?t@LhANh@Vl@^f@n@f@pAd@HVC|GG`BSfAQ^EXc@dAWd@sAh@sAv@g@f@qCfBy@|@_@r@a@h@Yn@yBpAyA`BeArB]dAu@fBsFtNyA`DoAxBw@lAOD[r@iAlA@GHF?Bq@ZELg@f@a@h@[TGPkArAuAfBsAlCc@pAm@~BQdAuCjSkAnHw@tFmAfGcB`Hc@zBsApIUbAkA|I{@xFO^Kr@WfAKz@W`A]nBIx@Kd@Kb@e@pAE\\AdAOfA[nAYrBa@pBEd@Yx@YvA[~BKh@QbBKnCA|@N`Fb@xCd@lB|@hC\\v@h@|@dCxCv@hATF`@j@RFTTzCbElJzLPL~Ax@FLb@|AVf@pDpElK`NnBhCJV|@t@b@r@vDvEx@z@`AlApDdEbHpIt@p@jClDjArALFT?ICEF]OKSaAgAe@s@GEqEiFu@_AS]_DmDWe@WOm@q@mBcCwFwGQ[a@_@Ua@iAqAaFuG_AgA}@qA{@aAaGwH]s@_@uAQW_Bu@OMoAgBkB{BmBkCYYiB_C_AsAOOOCU[M[u@i@}D_Fm@aAo@_B}@uCe@oCMqBG_C?cAHsCViCP}@Bg@R{@RuA`@oAr@_EJgA`@iBEk@Pu@Dg@l@gBT_ANU@]A[B[n@kDt@_DtBuOXmBFQDc@TaAP}AZuAPuAvBaJdAgFv@{EFk@`C_PRcB\\mB|@sGTgAl@yBz@wBz@wAvAaBTa@hBiBbAyA~BiCpAkB~A_Dv@iBvHsRj@qAfAqB|AaBl@]DAJJPOPWX{@x@iA^o@^Ut@q@f@SlA{@TGvAcA~@_@jA}B?SHc@?UJo@LoBDyFMe@YK[Ay@g@q@}@Wi@E]Oo@EwAD_AI_@C[S}@Cq@l@wFLiBZsCf@oGJ_@J{BRmARmB`@cF\\iFJoCFk@AcADw@AkCBiEEwC_@sJo@sJIe@e@sHDCKWKoAg@yDw@cEBGTM@I]cBu@iCEYM[AMFALPPFHE?ID?@IGBBBBLKb@BVB?",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.523529,
+    127.101279
+  ],
+  "end_latlng": [
+    37.519611,
+    127.092913
+  ],
+  "average_speed": 2.183,
+  "max_speed": 3.8,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 22.6,
+  "elev_low": 14.1,
+  "upload_id": 4259893114,
+  "upload_id_str": "4259893114",
+  "external_id": "ac8273a5-25e6-42db-8d69-9c2c165ed284-activity.fit",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

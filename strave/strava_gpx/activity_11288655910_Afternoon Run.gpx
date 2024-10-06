@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="Strava" version="1.1" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata><time>2024-04-29T04:17:35Z</time></metadata>
+<trk>
+<name>Afternoon Run</name>
+<type>1</type>
+<trkseg>
+<trkpt lat="37.486293" lon="126.895544">
+<ele>20.2</ele>
+<time>2024-04-29T04:17:35Z</time>
+</trkpt>
+<trkpt lat="37.486296" lon="126.895558">
+<ele>20.2</ele>
+<time>2024-04-29T04:17:36Z</time>
+</trkpt>
+<trkpt lat="37.486296" lon="126.895558">
+<ele>20.2</ele>
+<time>2024-04-29T04:17:36Z</time>
+</trkpt>
+</trkseg>
+</trk>
+</gpx>

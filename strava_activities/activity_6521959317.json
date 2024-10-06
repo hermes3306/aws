@@ -1,0 +1,63 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "\uc624\ud6c4 \uac77\uae30",
+  "distance": 2893.5,
+  "moving_time": 2116,
+  "elapsed_time": 2271,
+  "total_elevation_gain": 13.6,
+  "type": "Walk",
+  "sport_type": "Walk",
+  "id": 6521959317,
+  "start_date": "2021-12-27T08:22:06Z",
+  "start_date_local": "2021-12-27T17:22:06Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 0,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a6521959317",
+    "summary_polyline": "e__dFm_rfW[dDUbDB`@ZjB@`@CnAD~@Pz@Vv@DFv@t@VNt@ZRLFJFP?VI~ADLLFR?^ErAYjC]dAGfA@dAMfACfAGbCYxAKt@KjBKT?LDJJFLF\\BxAD^JVLDP?v@IzAIf@@z@St@IV?t@Jx@Gj@?j@K~@WbAU\\EbBGh@Kj@GjACVDj@XVBTAl@K~@Wz@SPGNMFApAI`AB`@A`AMlAUXO\\[v@_ALMTIl@Mp@e@z@u@`Ac@fBk@fBkAb@UREFBEJy@hACL?N|@pCpAdHLd@LRMJ",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.51939617097378,
+    127.07335805520415
+  ],
+  "end_latlng": [
+    37.50098800286651,
+    127.06788282841444
+  ],
+  "average_speed": 1.367,
+  "max_speed": 2.816,
+  "has_heartrate": true,
+  "average_heartrate": 75.0,
+  "max_heartrate": 75.0,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": true,
+  "elev_high": 25.9,
+  "elev_low": 12.1,
+  "upload_id": 6934763844,
+  "upload_id_str": "6934763844",
+  "external_id": "83A54F53-06C9-41A0-A7E0-F429D4E4C2AE.fit",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

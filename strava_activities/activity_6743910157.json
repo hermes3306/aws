@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "\uc624\ud6c4 \ub2ec\ub9ac\uae30",
+  "distance": 4565.5,
+  "moving_time": 1907,
+  "elapsed_time": 1923,
+  "total_elevation_gain": 5.1,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": 0,
+  "id": 6743910157,
+  "start_date": "2022-02-27T04:06:58Z",
+  "start_date_local": "2022-02-27T13:06:58Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 2,
+  "comment_count": 0,
+  "athlete_count": 2,
+  "photo_count": 0,
+  "map": {
+    "id": "a6743910157",
+    "summary_polyline": "kd`dFow{fWCNE?EJK|CAvBFtAR~ARfAJnAXpARxAPr@Lv@@^Ax@BRZr@DHD@p@hAFT@PGjA?t@WnAK`AKfAA|@?~AAt@DrCCfDBbCAzFBnCGjK?`KCtD@vBDr@CVp@vAFNB^QtACJm@v@MX_@n@QLE@KEs@gAOk@W}AISWa@SQ]SyBo@]W{A}AqBiBy@cAw@w@e@o@yAwAW]cA_Am@s@o@m@[Mm@m@mBaAsAk@oA_@UCW@a@CsA[_IgCqAi@uAo@sBaBaAaAiCkDiAmAm@e@Uo@i@g@q@_A[[y@cAc@UiAa@s@[u@O[OcAw@eHeFo@a@s@o@SY_@]{@[QE]As@Dg@CWEg@UYWgAwB]Kw@G[UMUW}@Q_@",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.52533986233175,
+    127.12328871712089
+  ],
+  "end_latlng": [
+    37.544489493593574,
+    127.1180157456547
+  ],
+  "average_speed": 2.394,
+  "max_speed": 4.182,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 28.2,
+  "elev_low": 14.2,
+  "upload_id": 7172896135,
+  "upload_id_str": "7172896135",
+  "external_id": "e2a4a3f0-9e46-4444-a6f4-0cf311aaa374-activity.fit",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

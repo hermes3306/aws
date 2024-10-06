@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "Morning Run",
+  "distance": 2729.1,
+  "moving_time": 1170,
+  "elapsed_time": 1355,
+  "total_elevation_gain": 7.5,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": 0,
+  "id": 11654188988,
+  "start_date": "2024-06-15T01:00:21Z",
+  "start_date_local": "2024-06-15T10:00:21Z",
+  "timezone": "(GMT+09:00) Asia/Tokyo",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 0,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a11654188988",
+    "summary_polyline": "iwrxEcrusY?]BZD@HEFQAA?A@FT_@?CRGVOF@FWXi@CM?EZMFQTG`Ai@p@Wz@QBBHGJFXAFODCt@KlAe@PA`@Jh@GF@HARGBIDGVCLGJ?HEHEDYJEPQBQl@q@NGRU^EPODK?Mj@{@ZUNU?EJIR?JAZRPZ^x@d@h@Ld@EPOTKHUb@YRi@l@k@^c@R?DBEI@?HED_@Rc@Dq@`@s@XGHi@Zw@VGFULg@d@KBc@VOLIL_@`@KFMNGBc@f@UL[d@KFEJC?MK_BjA]NKJCLGBILYJWXe@b@GLMBCNC?KPMLKFUDWPWJSNe@Ha@b@UHIFWVOBu@VSRUJSROXGF_@POXMHSd@o@Na@o@E]GMMM?KJUBAD@DGb@y@@A@B@IHIAO?FJIBIHg@JIFQPUJUBED@Rk@PO@I@BLOb@o@`Ao@DCRABAACFA@EGGLSHSdAaAETIROJSHBOILDNJL?BHCFIJ?d@QLQZWFCTSCFFGJAJ@@FB@TEFBXEJIDQPQ",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    35.65445146523416,
+    139.7073846962303
+  ],
+  "end_latlng": [
+    35.65354219637811,
+    139.70722334459424
+  ],
+  "average_speed": 2.333,
+  "max_speed": 4.691,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 26.9,
+  "elev_low": 21.4,
+  "upload_id": 12435601492,
+  "upload_id_str": "12435601492",
+  "external_id": "ebf9ccbd-4db4-479f-bd46-53cdf9585890-activity.fit",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

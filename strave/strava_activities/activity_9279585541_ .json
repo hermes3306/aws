@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "오전 달리기",
+  "distance": 7081.0,
+  "moving_time": 2999,
+  "elapsed_time": 3014,
+  "total_elevation_gain": 32.5,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": 0,
+  "id": 9279585541,
+  "start_date": "2023-06-17T01:54:40Z",
+  "start_date_local": "2023-06-17T10:54:40Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 0,
+  "comment_count": 0,
+  "athlete_count": 2,
+  "photo_count": 0,
+  "map": {
+    "id": "a9279585541",
+    "summary_polyline": "wbfdF_x{fWi@m@MCi@?[A_@Mw@k@MMWg@[y@KKYIi@[sAk@}A]m@Ie@]cAm@WWa@MG@MAMIk@Mu@y@O[a@_@Yk@[Uo@iASO{@YMAQQMg@EEK@GCe@WWSOQU_@Se@u@kBYcAMU]KkCm@a@OIISc@uA{Bm@oA_@{@k@kAg@uAWi@Qq@s@uBc@iBWo@a@qAKQQSASEY_@mAO[AWB@Jp@h@nBx@vBl@pBN^l@zBP`@JNLl@BFF@FVXz@j@pAfBfDHHVh@p@fANNVJzA\\jAXHDNRRdA|@xBFLJHZl@t@f@h@RLb@JN~@X\\LLPZn@n@p@JVLPNJNTTb@HHJDPPz@X`@@FB^\\t@f@PFj@Z~A\\\\Dt@Xr@f@~@ZNZNh@T`@VVj@b@d@NdACRLR`@At@Dt@?~@D\\FZVr@D@ABAEII@AA?AAKe@MWGc@Bk@FUKg@?iALDFHJDXCV@VJRRZJP?NEh@APEr@JTANBVJr@`@`A^zC~@XFTJP?jA`@~@NTJZJtAZf@P^HZJfARdA\\N?DG@IGNDB@HDDbAPlBh@v@NlBj@r@NPBxBp@\\FpCp@^T~@RRH`@VJBl@b@XNb@LdAPr@Zd@FLD",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "visibility": "followers_only",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.55415064282715,
+    127.12318494915962
+  ],
+  "end_latlng": [
+    37.54373428411782,
+    127.11702433414757
+  ],
+  "average_speed": 2.361,
+  "max_speed": 4.26,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 32.7,
+  "elev_low": 13.3,
+  "upload_id": 9954424481,
+  "upload_id_str": "9954424481",
+  "external_id": "c3386f97-6265-412b-8704-68f84270b7cc-activity.fit",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

@@ -1,0 +1,62 @@
+{
+  "resource_state": 2,
+  "athlete": {
+    "id": 41933085,
+    "resource_state": 1
+  },
+  "name": "Saturday Early Morning Activity",
+  "distance": 10818.4,
+  "moving_time": 4068,
+  "elapsed_time": 40920,
+  "total_elevation_gain": 25.6,
+  "type": "Run",
+  "sport_type": "Run",
+  "workout_type": 0,
+  "id": 12226266477,
+  "start_date": "2024-08-23T15:00:28Z",
+  "start_date_local": "2024-08-24T00:00:28Z",
+  "timezone": "(GMT+09:00) Asia/Seoul",
+  "utc_offset": 32400.0,
+  "location_city": null,
+  "location_state": null,
+  "location_country": null,
+  "achievement_count": 0,
+  "kudos_count": 0,
+  "comment_count": 0,
+  "athlete_count": 1,
+  "photo_count": 0,
+  "map": {
+    "id": "a12226266477",
+    "summary_polyline": "{ihdF}sofWHHOm@Ky@Tg@`@g@@SOc@o@a@IICM_B}@_BoA{HeFo@i@@SPGPSINUJHADDEBPMKFJh@iEnBpE_Ds@?FAIWQDKNE@?F`@ZFLCDXP?MZPPG_@[g@q@AGBCB]BEL?JI^b@b@Lg@E?D_ATD@JKHUQEE]Ok@UF^z@PZACb@PWHSWG@@NCADEEAKm@HECXJZGEDGIC@EEC@CLCBLE@Gc@FX?CNIBQMFCt@STB`@WKKECM\\]D@FOAq@CGs@l@vAb@AMZAJOD@?NGNIDTBCBB@CALBo@UG@Kn@I@YYm@c@OCW]Oa@_@Yc@QKOy@e@a@GkAa@GMa@MEQDFERDn@LX^Zf@Zx@HRPxB^v@^t@h@T@h@n@n@^xBpBbAn@R^XjAHx@TFv@AfBMEJK?N@`@h@lA|@FL?DK@[d@UFMJIA?I?\\@OHKIBKRAJPKFUKtAGIBACSDIE[HECIHUEID@DI@e@?RELFj@C@H\\x@EJHETEB?TWPZHBCORYEULIAdLnWMBDDDY@DJOJ@?LXFj@g@TCd@^l@Vv@BLNLCr@}@AKRWNg@AKVOHBECBKMEFSfAs@VWr@wAPk@@WF?LTJWDe@Ce@Ba@NMFUGqADyAHu@Ae@d@eAC]Ro@Dg@?s@EWF[C_@FK@[GY?c@Pc@@g@Iq@M[O{@Sc@UG[g@m@Q_CcBSSs@[o@e@UGOQHMNaAb@g@d@cARgANSJKJ[NMJ]NOj@wA^a@R{@l@w@L]BUPSDUR_@Vs@Ta@Le@X]AQJSCIL[^N`@Cl@PFc@JWUBoAy@mAg@i@c@cCaAiDgBe@Ma@_@mAa@QOm@Se@a@g@QuBeAi@SsAy@aBs@oAu@qB{@g@O}CeBqAe@s@c@eAc@_@YcEeBWCWQkBQeAg@KCSDe@Mk@L_AMcD?yAJUJg@EkCVKQEi@OIe@ACGvA]hA?xAElDUvBCr@HhBCJH~@Fr@Ox@V\\BjBj@|CrALJj@jALHtCvAXHlAr@xAZrAf@`Ah@v@p@lEnBrAv@lAVz@j@~DrBtF`CdBn@jA`AhA`@d@ZlAj@lBtBfAvAb@\\Zf@~DtEvBrBj@r@xAjA~EhDdAj@d@LHRFp@hAz@f@h@nCnBzAtAJPlAn@l@b@|AtAdAfA",
+    "resource_state": 2
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": true,
+  "visibility": "only_me",
+  "flagged": false,
+  "gear_id": null,
+  "start_latlng": [
+    37.56718940567225,
+    127.06127260811627
+  ],
+  "end_latlng": [
+    37.55159307271242,
+    127.0634382404387
+  ],
+  "average_speed": 2.659,
+  "max_speed": 14.23,
+  "has_heartrate": false,
+  "heartrate_opt_out": false,
+  "display_hide_heartrate_option": false,
+  "elev_high": 25.0,
+  "elev_low": 13.7,
+  "upload_id": 13034093232,
+  "upload_id_str": "13034093232",
+  "external_id": "last_run.gpx",
+  "from_accepted_tag": false,
+  "pr_count": 0,
+  "total_photo_count": 0,
+  "has_kudoed": false
+}

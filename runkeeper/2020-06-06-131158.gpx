@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+  version="1.1"
+  creator="Runkeeper - http://www.runkeeper.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"
+  xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1">
+<trk>
+  <name><![CDATA[Cycling 6/6/20 1:11 pm]]></name>
+  <time>2020-06-06T04:11:58Z</time>
+<trkseg>
+<trkpt lat="37.524490000" lon="127.115871000"><ele>25.8</ele><time>2020-06-06T04:11:58Z</time></trkpt>
+<trkpt lat="37.524451000" lon="127.115963000"><ele>25.3</ele><time>2020-06-06T04:12:16Z</time></trkpt>
+<trkpt lat="37.524464000" lon="127.116086000"><ele>24.9</ele><time>2020-06-06T04:12:21Z</time></trkpt>
+<trkpt lat="37.524414000" lon="127.116196000"><ele>24.6</ele><time>2020-06-06T04:12:25Z</time></trkpt>
+<trkpt lat="37.524377000" lon="127.116303000"><ele>24.6</ele><time>2020-06-06T04:12:28Z</time></trkpt>
+<trkpt lat="37.524338000" lon="127.116403000"><ele>24.6</ele><time>2020-06-06T04:12:32Z</time></trkpt>
+<trkpt lat="37.524308000" lon="127.116505000"><ele>24.0</ele><time>2020-06-06T04:12:36Z</time></trkpt>
+<trkpt lat="37.524299000" lon="127.116611000"><ele>23.4</ele><time>2020-06-06T04:12:40Z</time></trkpt>
+<trkpt lat="37.524299000" lon="127.116611000"><ele>23.0</ele><time>2020-06-06T04:12:40Z</time></trkpt>
+</trkseg>
+</trk>
+</gpx>
