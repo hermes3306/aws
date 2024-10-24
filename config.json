@@ -1,0 +1,17 @@
+{
+    "news_sources": [
+        {
+            "name": "CNN",
+            "base_url": "https://www.cnn.com",
+            "sections": [
+                "/world",
+                "/politics",
+                "/business",
+                "/health"
+            ],
+            "active": false
+        }
+    ],
+    "update_interval": 300,
+    "max_articles": 50
+}

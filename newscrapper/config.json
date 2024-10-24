@@ -1,0 +1,16 @@
+{
+    "news_sources": [
+        {
+            "name": "CNN",
+            "base_url": "https://www.cnn.com",
+            "sections": ["/world", "/politics", "/business", "/health"]
+        },
+        {
+            "name": "Reuters",
+            "base_url": "https://www.reuters.com",
+            "sections": ["/world", "/business", "/technology"]
+        }
+    ],
+    "update_interval": 300,
+    "max_articles": 50
+}
