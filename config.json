@@ -10,6 +10,27 @@
                 "/health"
             ],
             "active": false
+        },
+        {
+            "name": "Reuters",
+            "base_url": "https://www.reuters.com",
+            "sections": [
+                "/world",
+                "/business",
+                "/technology"
+            ],
+            "active": false
+        },
+        {
+            "name": "YTN",
+            "base_url": "https://ytn.co.kr",
+            "sections": [
+                "/news/society",
+                "/news/economy",
+                "/news/politics",
+                "/news/world"
+            ],
+            "active": true
         }
     ],
     "update_interval": 300,
